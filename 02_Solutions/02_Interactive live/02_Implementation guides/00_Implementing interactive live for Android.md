@@ -352,8 +352,8 @@ To co-host either with audience members or a host from another live room (host P
    mRoomId = roomId;
    UserInfo userInfo = new UserInfo(userId, null);
    RTCRoomConfig roomConfig = new RTCRoomConfig(ChannelProfile.CHANNEL_PROFILE_COMMUNICATION,
-           true, true, true);
-           
+           true, true, true, true);
+
    // Join the room. Get the token from the app server.
    mRTCRoom.joinRoom(token, userInfo, roomConfig);
    ```
@@ -412,8 +412,8 @@ To co-host either with audience members or a host from another live room (host P
    ```Java
    private RtcRoomEventHandlerAdapter mIRtcRoomEventHandler = new RtcRoomEventHandlerAdapter() {
        @Override
-       public void onUserPublishStream(String uid, MediaStreamType type) {
-           if (type == RTC_MEDIA_STREAM_TYPE_VIDEO || type == RTC_MEDIA_STREAM_TYPE_BOTH) {
+       public void onUserPublishStreamVideo(String roomId, String uid, boolean isPublish) {
+           if (isPublish) {
                // Add the view to render the co-host's video
                TextureView renderView = new TextureView(Env.getApplicationContext());
                VideoCanvas canvas = new VideoCanvas();
@@ -421,81 +421,80 @@ To co-host either with audience members or a host from another live room (host P
                canvas.renderMode = RENDER_MODE_HIDDEN;
                final RemoteStreamKey streamKey = new RemoteStreamKey(mRTCRoomId, uid, StreamIndex.STREAM_INDEX_MAIN);
                mRTCVideo.setRemoteVideoCanvas(streamKey, canvas);
-           }
-           
-           // Modify the layout information for the host
-           final MixedStreamLayoutRegionConfig selfRegion = new MixedStreamLayoutRegionConfig()
-                   .setUserID(userId)// The user ID of the host
-                   .setIsLocalUser(true)
-                   .setRoomID(roomId)
-                   .setLocationX(0)// For reference only
-                   .setLocationY(0.25)// For reference only
-                   .setWidthProportion(0.5)// For reference only
-                   .setHeightProportion(0.5)// For reference only
-                   .setAlpha(1)
-                   .setZOrder(0)
-                   .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
-           
-           // Set the layout information for the co-host
-           final MixedStreamLayoutRegionConfig hostRegion = new MixedStreamLayoutRegionConfig()
-                   .setUserID(coHostUserId)// The user ID of the co-host
-                   .setIsLocalUser(false)
-                   .setRoomID(roomId)
-                   .setLocationX(0.5)// For reference only
-                   .setLocationY(0.25)// For reference only
-                   .setWidthProportion(0.5)// For reference only
-                   .setHeightProportion(0.5)// For reference only
-                   .setAlpha(1)
-                   .setZOrder(0)
-                   .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
-                   
-           // Set the overall layout of the mixed stream
-           final MixedStreamLayoutConfig layout = new MixedStreamLayoutConfig()
-                   .setRegions(new MixedStreamLayoutRegionConfig[]{selfRegion, hostRegion});
-           streamConfig.setLayout(layout);
-           
-            // Set the ID for the push to CDN task
-           String taskId = "";
-           
-           // Update the push to CDN task
-           mRTCVideo.updatePushMixedStreamToCDN(taskId, mixedConfig);
-               
-       }
-   
-       @Override
-       public void onUserUnpublishStream(String uid, MediaStreamType type, StreamRemoveReason reason) {
-           if (type == RTC_MEDIA_STREAM_TYPE_VIDEO || type == RTC_MEDIA_STREAM_TYPE_BOTH) {
+
+               // Modify the layout information for the host
+               final MixedStreamLayoutRegionConfig selfRegion = new MixedStreamLayoutRegionConfig()
+                       .setUserID(userId)// The user ID of the host
+                       .setIsLocalUser(true)
+                       .setRoomID(roomId)
+                       .setLocationX(0)// For reference only
+                       .setLocationY(0.25)// For reference only
+                       .setWidthProportion(0.5)// For reference only
+                       .setHeightProportion(0.5)// For reference only
+                       .setAlpha(1)
+                       .setZOrder(0)
+                       .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
+
+               // Set the layout information for the co-host
+               final MixedStreamLayoutRegionConfig hostRegion = new MixedStreamLayoutRegionConfig()
+                       .setUserID(coHostUserId)// The user ID of the co-host
+                       .setIsLocalUser(false)
+                       .setRoomID(roomId)
+                       .setLocationX(0.5)// For reference only
+                       .setLocationY(0.25)// For reference only
+                       .setWidthProportion(0.5)// For reference only
+                       .setHeightProportion(0.5)// For reference only
+                       .setAlpha(1)
+                       .setZOrder(0)
+                       .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
+
+               // Set the overall layout of the mixed stream
+               final MixedStreamLayoutConfig layout = new MixedStreamLayoutConfig()
+                       .setRegions(new MixedStreamLayoutRegionConfig[]{selfRegion, hostRegion});
+               streamConfig.setLayout(layout);
+
+               // Set the ID for the push to CDN task
+               String taskId = "";
+
+               // Update the push to CDN task
+               mRTCVideo.updatePushMixedStreamToCDN(taskId, mixedConfig);
+           } else {
                // Remove the view that renders the co-host's video
                VideoCanvas canvas = new VideoCanvas();
                canvas.renderView = null;
                canvas.renderMode = RENDER_MODE_HIDDEN;
                final RemoteStreamKey streamKey = new RemoteStreamKey(mRTCRoomId, uid, StreamIndex.STREAM_INDEX_MAIN);
                mRTCVideo.setRemoteVideoCanvas(streamKey, canvas);
+
+               // Modify the layout information of the host
+               final MixedStreamLayoutRegionConfig region = new MixedStreamLayoutRegionConfig()
+                       .setUserID(userId)// The user ID of the host
+                       .setIsLocalUser(true)
+                       .setRoomID(roomId)
+                       .setLocationX(0)// For reference only
+                       .setLocationY(0.25)// For reference only
+                       .setWidthProportion(0.5)// For reference only
+                       .setHeightProportion(0.5)// For reference only
+                       .setAlpha(1)
+                       .setZOrder(0)
+                       .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
+
+               // Set the overall layout of the mixed stream
+               final MixedStreamLayoutConfig layout = new MixedStreamLayoutConfig()
+                       .setRegions(new MixedStreamLayoutRegionConfig[]{region});
+               streamConfig.setLayout(layout);
+
+               // Set the ID for the push to CDN task
+               String taskId = "";
+
+               // Update the push to CDN task
+               mRTCVideo.updatePushMixedStreamToCDN(taskId, mixedConfig);
            }
-           
-           // Modify the layout information of the host
-           final MixedStreamLayoutRegionConfig region = new MixedStreamLayoutRegionConfig()
-                   .setUserID(userId)// The user ID of the host
-                   .setIsLocalUser(true)
-                   .setRoomID(roomId)
-                   .setLocationX(0)// For reference only
-                   .setLocationY(0.25)// For reference only
-                   .setWidthProportion(0.5)// For reference only
-                   .setHeightProportion(0.5)// For reference only
-                   .setAlpha(1)
-                   .setZOrder(0)
-                   .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
-                   
-           // Set the overall layout of the mixed stream
-           final MixedStreamLayoutConfig layout = new MixedStreamLayoutConfig()
-                   .setRegions(new MixedStreamLayoutRegionConfig[]{region});
-           streamConfig.setLayout(layout);
-           
-           // Set the ID for the push to CDN task
-           String taskId = "";
-           
-           // Update the push to CDN task
-           mRTCVideo.updatePushMixedStreamToCDN(taskId, mixedConfig);
+       }
+
+       @Override
+       public void onUserPublishStreamAudio(String roomId, String uid, boolean isPublish) {
+           // Handle audio stream publish/unpublish events
        }
    };
    ```
@@ -662,7 +661,7 @@ To become a co-host, stop playing the live stream with the live player, and star
     // Set the user information
    UserInfo userInfo = new UserInfo(userId, null);
    RTCRoomConfig roomConfig = new RTCRoomConfig(ChannelProfile.CHANNEL_PROFILE_COMMUNICATION,
-           true, true, true);
+           true, true, true, true);
        
    // Join the room. Get the token from the app server.
    mRTCRoom.joinRoom(token, userInfo, roomConfig);
@@ -672,8 +671,8 @@ To become a co-host, stop playing the live stream with the live player, and star
    ```Java
    private RtcRoomEventHandlerAdapter mIRtcRoomEventHandler = new RtcRoomEventHandlerAdapter() {
        @Override
-       public void onUserPublishStream(String uid, MediaStreamType type) {
-           if (type == RTC_MEDIA_STREAM_TYPE_VIDEO || type == RTC_MEDIA_STREAM_TYPE_BOTH) {
+       public void onUserPublishStreamVideo(String roomId, String uid, boolean isPublish) {
+           if (isPublish) {
                // Add the view to render the co-host's video
                TextureView renderView = new TextureView(Env.getApplicationContext());
                VideoCanvas canvas = new VideoCanvas();
@@ -681,12 +680,7 @@ To become a co-host, stop playing the live stream with the live player, and star
                canvas.renderMode = RENDER_MODE_HIDDEN;
                final RemoteStreamKey streamKey = new RemoteStreamKey(mRTCRoomId, uid, StreamIndex.STREAM_INDEX_MAIN);
                mRTCVideo.setRemoteVideoCanvas(streamKey, canvas);
-           }          
-       }
-   
-       @Override
-       public void onUserUnpublishStream(String uid, MediaStreamType type, StreamRemoveReason reason) {
-           if (type == RTC_MEDIA_STREAM_TYPE_VIDEO || type == RTC_MEDIA_STREAM_TYPE_BOTH) {
+           } else {
                // Remove the view for the co-host
                VideoCanvas canvas = new VideoCanvas();
                canvas.renderView = null;
@@ -694,6 +688,11 @@ To become a co-host, stop playing the live stream with the live player, and star
                final RemoteStreamKey streamKey = new RemoteStreamKey(mRTCRoomId, uid, StreamIndex.STREAM_INDEX_MAIN);
                mRTCVideo.setRemoteVideoCanvas(streamKey, canvas);
            }
+       }
+
+       @Override
+       public void onUserPublishStreamAudio(String roomId, String uid, boolean isPublish) {
+           // Handle audio stream publish/unpublish events
        }
    };
    ```
