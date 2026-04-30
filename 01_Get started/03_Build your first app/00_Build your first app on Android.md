@@ -11,6 +11,7 @@ Some tasks are specific to certain features and can be skipped if you do not nee
 | 1. Activate the BytePlus RTC service. <br> 2. Create an RTC app. | Interactive live streaming | * [Before Using RTC Service](https://docs.byteplus.com/byteplus-rtc/docs/69865) | * AppId <br> * AppKey |
 | 1. Activate the BytePlus MediaLive service. <br> 2. Create a MediaLive app and obtain a license. <br>    If you have already created a BytePlus VOD app, bind the existing app instead of creating a new one. <br>  | Interactive live streaming | * [Activating the MediaLive service](https://docs.byteplus.com/docs/byteplus-media-live/docs-getting-started) <br> * SDK management <br>    * [Creating an SDK application](https://docs.byteplus.com/docs/byteplus-media-live/docs-sdk-management#creating-an-sdk-application) <br>    * [Accessing your SDK license](https://docs.byteplus.com/docs/byteplus-media-live/docs-sdk-management#accessing-your-sdk-license) | * App ID <br> * BytePlus MediaLive SDK license file |
 | 1. Activate the BytePlus VOD service. <br> 2. Create a VOD app and obtain a license. <br>    If you have already created a BytePlus MediaLive app, bind the existing app instead of creating a new one. <br>  | Video playback | * [Step 1: Enable the BytePlus VOD service](https://docs.byteplus.com/docs/byteplus-vod/docs-getting-started#step-1-enable-the-byteplus-vod-service) <br> * [Application management](https://docs.byteplus.com/byteplus-vod/docs/sdk-management) <br> * [License management](https://docs.byteplus.com/docs/byteplus-vod/docs-license-management) | * App ID <br> * BytePlus VOD SDK license file |
+
 ## System requirements
 
 * Android Studio Arctic Fox or higher. We recommend using the latest version of Android Studio for optimal performance.
@@ -46,6 +47,7 @@ Under the root directory, open the `gradle.properties` file, and configure the f
 | APP_KEY | The **AppKey** of your BytePlus RTC app. | 1bfaa8e********fjb6j6hhde68c07d |
 | ACCESS_KEY_ID | The **Access Key ID (AK)** of your BytePlus account. | AKAPZ7********FLB0D38CM8DK49SO39D83KD820DFK4k9 |
 | SECRET_ACCESS_KEY | The **Secret Access Key (SK)** of your BytePlus account. | 8dk39vK********k7D93KDHS8DJSLud830DJEO37EI3UDK37WODKu3oQ |
+
 ### Setting up for MediaLive
 #### Preparing domain names
 This task is required if you want to experience the interactive live streaming scene.
@@ -56,6 +58,7 @@ This task is required if you want to experience the interactive live streaming s
 | **Add a CNAME record for your domain name.** <br> After you add a domain name, BytePlus MediaLive automatically assigns it a corresponding MediaLive domain. You must then add a CNAME record to point your domain to the assigned MediaLive domain. | [Adding a CNAME record](https://docs.byteplus.com/byteplus-media-live/docs/adding-a-cname-record) | / |
 | **Enable URL authentication.** <br> Enable URL authentication to secure your streams and prevent unauthorized domain use. | [URL authentication](https://docs.byteplus.com/en/byteplus-media-live/docs/url-authentication?version=v1.0) | * Primary key |
 | **Configure a transcoding template.** <br> You can transcode the original live stream to meet the viewing requirements of different users. | [Configuring a transcoding task](https://docs.byteplus.com/en/byteplus-media-live/docs/configuring-transcoding) | * AppName |
+
 #### Setting stream addresses
 This task is required if you want to experience the interactive live streaming scene.
 
@@ -67,6 +70,7 @@ Under the `solutions/interactivelive` directory of the demo project, open the `g
 | LIVE_PUSH_DOMAIN | rtmp://{domain_name}, where "domain_name" represents the **domain name for stream pushing**. | `rtmp://push-demo.com` |
 | LIVE_PUSH_KEY | The **Primary key** for URL authentication. | `XED45d5dDLSH********KDFD` |
 | LIVE_APP_NAME | The **AppName** for which you have configured a transcoding template. | `videoone_demo` |
+
 #### Integrating the license
 This task is required if you want to experience either interactive live streaming scene or live streaming-related functions.
 
@@ -92,6 +96,7 @@ Integrate the BytePlus VOD SDK license you obtained in the [Prerequisites](#prer
 | VOD_APP_ID | The **App ID** of the VOD app you created in the [Prerequisites](#prerequisites) section. | 5****1 |
 | VOD_APP_CHANNEL | The distribution channel of your app. | googleplay |
 | VOD_LICENSE_URI | The storage path of the **BytePlus VOD SDK license file** you obtained in the [Prerequisites](#prerequisites) section. | assets:///vodlicense/{LICENSE_NAME}.lic |
+
 ### Compiling the project
 
 1. Connect the mobile device to your computer, and set it as the target device in Android Studio.

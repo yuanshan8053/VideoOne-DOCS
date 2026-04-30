@@ -2,7 +2,8 @@ The BytePlus Video One conversational AI solution allows users to engage in scen
 
 | English demo | Japanese demo |
 | --- | --- |
-| ![](../../img/00_Solution_overview_036.mp4) | ![](../../img/00_Solution_overview_037.mp4) |
+| ![🔴 Video (preview unavailable)](../../img/00_Solution_overview_036.mp4) | ![🔴 Video (preview unavailable)](../../img/00_Solution_overview_037.mp4) |
+
 # Technical architecture
 The conversational AI solution uses BytePlus RTC for efficient acquisition of audio and video data, customized processing, and ultra-low latency transmission. The cloud-based smart audiovisual processing module uses 3A algorithms, AI noise reduction, and other capabilities to mitigate the impact of background noise and device performance on conversations. In addition, the solution integrates ASR (Automatic Speech Recognition), TTS (Text to Speech), LLM (Large Language Model), knowledge base RAG (Retrieval-Augmented Generation) and other services that simplify the speech-to-text and text-to-speech conversion processes. Its advanced capabilities in conversational intelligence, natural language processing, and multimodal interaction allow app users to interact in real time with the cloud-based large model.
 ![Image](../../img/00_Solution_overview_038.png)
@@ -13,6 +14,7 @@ The conversational AI solution uses BytePlus RTC for efficient acquisition of au
 | --- | --- |
 | Real-time AI conversation | Users can have natural and smooth conversations with AI in real time, just as they would with another person. Users can also interrupt at any time for two-way interaction. |
 | Noise suppression | Using advanced 3A audio technology and AI noise suppression, the solution effectively removes background noise while preserving clear human speech. This provides a balance between strong noise suppression and high fidelity in noisy environments. |
+
 ## Advanced features
 
 | **Feature** | **Description** |
@@ -22,6 +24,7 @@ The conversational AI solution uses BytePlus RTC for efficient acquisition of au
 | Function calling | The large model can identify particular requirements from the user's speech and call external functions or APIs to perform tasks that it is unable to complete independently. Examples include real-time data retrieval, file processing, and database searches. This expands the AI agent's capabilities, allowing it to provide accurate answers on topics like weather forecasts, stock prices, and math calculations. |
 | Integration with self-developed or third-party large models | Self-developed or third-party large models can be integrated into the conversational AI workflow to meet specific needs. |
 | Real-time interaction | When users interact with the AI agent, in addition to speech, they can also provide visual input to help the AI agent understand their surroundings and actions (video interaction). |
+
 # Advantages
 
 * **Natural conversation that can be interrupted at any time**

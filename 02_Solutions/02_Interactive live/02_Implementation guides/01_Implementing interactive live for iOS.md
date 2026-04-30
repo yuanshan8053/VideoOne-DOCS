@@ -131,6 +131,7 @@ The following table contains a detailed description for each parameter required 
 | channel | No | String | The channel through which to download the app. You can also use this parameter to distinguish between app builds for different environments, such as production, testing, and debugging. | `appstore` |
 | bundleID | Yes | String | The package name of your iOS app (i.e., the `bundleId` value of your project's main target). | `com.byteplus.video.ios` |
 | licenseFilePath | Yes | String | The path to the license file. | `live.lic` |
+
 ### Uploading logs
 By default, automatic SDK log uploading is enabled for debugging and analytics. To protect confidential data, you can manually disable it by setting `shouldInitAppLog` to `NO` in `TTSDKConfiguration`.
 ```objectivec

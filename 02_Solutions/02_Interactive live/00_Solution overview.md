@@ -1,6 +1,5 @@
 Interactive live streaming incorporates interactive features into the standard live streaming experience. This includes activities such as host PK battle and co-hosting with audience members, providing a more engaging experience than standard live streaming that only allows interaction through text chat and virtual gifts. Interactive live streaming brings the host and audience closer together, resulting in a more immersive and enjoyable experience for both parties.
-![](../../img/00_Solution_overview_043.png)
-
+![Image](../../img/00_Solution_overview_043.png)
 ## Billing
 This solution incurs fees for both live streaming and RTC services. For details, refer to [BytePlus MediaLive pricing overview](https://docs.byteplus.com/en/byteplus-media-live/docs/overview-1) and [RTC service fees](https://docs.byteplus.com/en/byteplus-rtc/docs/69871).
 ## Highlights

@@ -4,6 +4,7 @@ This document provides a brief introduction to how VideoOne uses BytePlus RTC SD
 A valid BytePlus account with [BytePlus RTC ](https://console.byteplus.com/rtc/workplaceRTC)service activated. Refer to [Before Using RTC Service ](https://docs.byteplus.com/en/byteplus-rtc/docs/69865)for detailed instructions.
 ## Implement features
 VideoOne demonstrates how to use the BytePlus RTC SDK to implement advanced features. Currently, it supports these categories: core function, room management, audio&video transmission, audio management, video management, message management and other components. For more details on implementing these features, please refer to the following documentation:
+
 | **Category** | **Function** | **Reference Document** |
 | --- | --- | --- |
 | Core functions | Quick start | [BytePlus RTC : Quick Start Guide](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70123) |
@@ -20,6 +21,7 @@ VideoOne demonstrates how to use the BytePlus RTC SDK to implement advanced feat
 |  | Push to CDN | [BytePlus RTC : Push to CDN](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-69817) |
 | Message management | SEI message | [ BytePlus RTC : Supplemental Enhancement Information (SEI)](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70140) |
 |  | Synchronize message with frames |  |
+
 Refer to the open-source code to integrate these features into your app:
 
 * [iOS : RTCAPIExample](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/iOS/Component/RTCAPIExample/RTCAPIExample)

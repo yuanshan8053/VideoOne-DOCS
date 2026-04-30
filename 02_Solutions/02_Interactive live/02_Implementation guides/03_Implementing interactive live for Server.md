@@ -118,6 +118,7 @@ Within the project folder, navigate to the `/Server/conf` directory, open the `c
 | live_stream_key | String | The **Primary key** for URL authentication. | DLH********KDF |
 | live_timer_enable | Boolean | To determine whether a live room session should automatically end when the time duration specified in the `live_experience_time` parameter is reached. <br>  <br> * true: Enable automatic ending <br> * false: Disable automatic ending | true |
 | live_experience_time | Integer | The duration, in minutes, after which a live room session should automatically end. This parameter takes effect only if `live_timer_enable` is set to `true`. | 20 |
+
 ### Deploying the project 
 Under the root directory, run the following command to compile and deploy the project:
 ```Shell
@@ -145,9 +146,7 @@ This section provides instructions on implementing the interactive live streamin
 ### Starting the live stream
 The host uses both the RTC engine and the live pusher to start a stream. Therefore, the server needs to provide the host with the RTC token and RTMP push stream URL.
 **Sequence diagram**
-
-![](../../../img/03_Implementing_interactive_live_for_Server_065.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_065.png)
 **Sample code**
 
 1. Generate RTMP push stream URL
@@ -196,7 +195,7 @@ To co-host with a host from another live room (in a host-vs-host battle), do the
 3. Update user status in the database.
 
 
-![](../../../img/03_Implementing_interactive_live_for_Server_066.png)
+![Image](../../../img/03_Implementing_interactive_live_for_Server_066.png)
 
 **Sample code**
 
@@ -241,8 +240,7 @@ To stop co-hosting, do the following:
 2. Update user status in the database.
 
 
-![](../../../img/03_Implementing_interactive_live_for_Server_067.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_067.png)
 **Sample code**
 
 1. Update user status in the database.
@@ -265,16 +263,13 @@ To end the live stream, do the following:
 2. Update user status in the database.
 
 
-![](../../../img/03_Implementing_interactive_live_for_Server_068.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_068.png)
 ## Implementing the feature for the audience
 This section provides instructions on implementing the interactive live streaming feature for the audience.
 ### Playing the live stream
 Use the live player to pull and play the live stream. Therefore, the server needs to provide the pull stream URL.
 **Sequence diagram**
-
-![](../../../img/03_Implementing_interactive_live_for_Server_069.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_069.png)
 **Sample code**
 
 1. Generate a stream pull URL
@@ -303,9 +298,7 @@ To become a co-host, do the following:
 3. Update user status in the database.
 
 **Sequence diagram**
-
-![](../../../img/03_Implementing_interactive_live_for_Server_070.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_070.png)
 **Sample code**
 
 1. Send invitation notification to the invited host via RTS.
@@ -351,9 +344,7 @@ To stop co-hosting, do the following:
 2. Update user status in the database.
 
 **Sequence diagram**
-
-![](../../../img/03_Implementing_interactive_live_for_Server_071.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_071.png)
 **Sample code**
 
 1. Update user status in the database.
@@ -376,7 +367,5 @@ To leave the live room, do the following:
 2. Update user status in the database.
 
 **Sequence diagram**
-
-![](../../../img/03_Implementing_interactive_live_for_Server_072.png)
-
+![Image](../../../img/03_Implementing_interactive_live_for_Server_072.png)
 

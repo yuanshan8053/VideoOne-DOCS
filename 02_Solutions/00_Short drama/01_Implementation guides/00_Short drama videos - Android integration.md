@@ -366,6 +366,7 @@ You must convert the data structures received from your app server into these da
 |  | vid | String | Required | Video ID |
 |  | dramaIndex | int | Optional | Video position in the episode list |
 |  | playAuthToken | String | Required | The PlayAuthToken of the video's data source which can be issued by the AppServer through the BytePlus VOD Server SDK. |
+
 The short drama demo's video controls use the [VideoItem](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/Android/solutions/vod/vod-scenekit/src/main/java/com/byteplus/vod/scenekit/data/model/VideoItem.java) data structure. Therefore, you must convert [DramaFeed](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/Android/solutions/vod-mini-drama/src/main/java/com/byteplus/vod/minidrama/remote/model/drama/DramaFeed.java) objects to [VideoItem](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/Android/solutions/vod/vod-scenekit/src/main/java/com/byteplus/vod/scenekit/data/model/VideoItem.java) objects for compatibility.
 ```Java
 // Convert DramaFeed to VideoItem

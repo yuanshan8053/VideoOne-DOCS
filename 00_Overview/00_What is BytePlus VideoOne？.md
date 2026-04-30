@@ -1,4 +1,4 @@
-![](../img/00_What_is_BytePlus_VideoOne？_001.mp4)
+![🔴 Video (preview unavailable)](../img/00_What_is_BytePlus_VideoOne？_001.mp4)
 The BytePlus Video One Solution (VideoOne) is an all-in-one audio and video solution providing everything you need for a top-notch audio and video experience. It integrates a full range of media capabilities, including:
 
 * Live streaming and watching
@@ -8,7 +8,7 @@ The BytePlus Video One Solution (VideoOne) is an all-in-one audio and video solu
 * Beauty AR and effects
 
 VideoOne consists of three main components, as illustrated in the diagram below:
-![](../img/00_What_is_BytePlus_VideoOne？_002.png)
+![🔴 Video (preview unavailable)](../img/00_What_is_BytePlus_VideoOne？_002.png)
 
 ## BytePlus VideoOne demo
 This open-source demo uses multiple BytePlus Media SDKs and Video Cloud services to showcase VideoOne's comprehensive audio and video capabilities. It demonstrates the product's capabilities through both solution templates and individual features for popular use cases.

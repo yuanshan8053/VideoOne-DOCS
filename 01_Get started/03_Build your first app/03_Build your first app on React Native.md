@@ -6,6 +6,7 @@ Complete the following tasks before you start. We recommend maintaining a centra
 | --- | --- | --- | --- |
 | 1. Register a BytePlus account. <br> 2. Create an access key for the account. | All features | * [Signing up for a BytePlus account](https://docs.byteplus.com/byteplus-platform/docs/signing-up-your-account) <br> * [Creating an access key](https://docs.byteplus.com/byteplus-platform/docs/creating-an-accesskey) | * Access Key ID (AK) <br> * Secret Access Key (SK) |
 | 1. Activate the Byteplus VOD service. <br> 2. Create a VOD app and obtain a license. <br>  <br> > If you have already created a BytePlus MediaLive app, bind the existing app instead of creating a new one. | Video playback | * [Step 1: Enable the BytePlus VOD service](https://docs.byteplus.com/docs/byteplus-vod/docs-getting-started#step-1-enable-the-byteplus-vod-service) <br> * [Application management](https://docs.byteplus.com/byteplus-vod/docs/sdk-management) <br> * [License management](https://docs.byteplus.com/docs/byteplus-vod/docs-license-management) | * App ID <br> * BytePlus VOD SDK license file |
+
 ## Development environment
 
 * **Watchman, Xcode, and CocoaPods:** Xcode requires version 14.1 or higher.
@@ -87,6 +88,7 @@ After opening the app, you can explore and experience the short drama solution.
 
 | ![Image](../../img/03_Build_your_first_app_on_React_Native_021.png) | ![Image](../../img/03_Build_your_first_app_on_React_Native_022.png) | ![Image](../../img/03_Build_your_first_app_on_React_Native_023.png) <br>  |
 | --- | --- | --- |
+
 ## Understanding the code
 ### Project structure
 The directory tree of the demo project is as follows:

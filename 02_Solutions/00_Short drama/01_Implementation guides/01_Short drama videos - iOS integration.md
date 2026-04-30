@@ -9,6 +9,7 @@ BytePlus VideoOne offers three integration solutions tailored for short drama vi
 | Required development | Clients only need to replace the business APIs and convert the data structures. | Clients need to implement network connectivity, UI components for the short drama player, playback page switching, payment and other features themselves. | Clients need to implement the player features and short drama specific features themselves. |
 | Time to market | As little as one week | Two weeks to one month | Approximately one month |
 | Related links | This document | [MDPlayerKit](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/iOS/Component/MiniDrama/Classes/Player) | [iOS Player SDK: Quickstart](https://docs.byteplus.com/en/docs/byteplus-vod/docs-getting-started-with-the-ios-player-sdk) |
+
 # Running the demo
 Before integrating the short drama demo, we recommend that you refer to the document [Running the demo (iOS)](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-ios-) and try the short drama video features.
 # Integrating the short drama demo
@@ -168,6 +169,7 @@ The short drama demo layer has defined data structures including [MDDramaInfoMod
 |  | videoId | NSString | Required | Video ID |
 |  | order | NSInteger | Optional | Video position in the episode list |
 |  | playAuthToken | NSString | Required | The PlayAuthToken for the video, issued by your app server via the BytePlus VOD Server SDK. |
+
 ### Replacing the business APIs
 
 1. Update the "Home" page API: Refer to the [getDramaDataForHomePageData](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/iOS/Component/MiniDrama/Classes/Main/Data/Network/NetworkingManager%2BMiniDrama.h) API of the [NetworkingManager+MiniDrama](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/iOS/Component/MiniDrama/Classes/Main/Data/Network/NetworkingManager%2BMiniDrama.h) object to implement an API that fetches short drama recommendations for the "Home" page. You can change the API request to your own request and encapsulate the requested data as an [MDDramaInfoModel](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/iOS/Component/MiniDrama/Classes/Main/Data/Model/MDDramaInfoModel.h) object and return it to the page for display. If the fields in the current [MDDramaInfoModel](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/iOS/Component/MiniDrama/Classes/Main/Data/Model/MDDramaInfoModel.h) object do not meet your business needs, you can also modify the source code to add more fields.

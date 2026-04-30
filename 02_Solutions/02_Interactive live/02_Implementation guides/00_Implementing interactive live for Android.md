@@ -198,6 +198,7 @@ The following table describes the parameters required for initialization:
 | AppVersion | Yes | String | The version number of your Android app. A valid version number should contain two or more separators, such as "1.3.2". | `1.3.2` |
 | AppChannel | Yes | String | The app's download channel. You can also use this parameter to distinguish between app builds for different environments, such as production, testing, and debugging. | `google_play` |
 | LicenseUri | Yes | String | The local path to the license file. | `assets:///license2/license2_test.lic` |
+
 ### Uploading logs
 By default, automatic SDK log uploading is enabled for debugging and analysis. To protect confidential data, you can call `Env.openAppLog(false)` to disable log uploading before initializing the SDK.
 ## Implementing the feature for the host
@@ -205,7 +206,8 @@ This section provides instructions on implementing the interactive live streamin
 ### Starting the live stream
 The host uses both the RTC engine and the live pusher to start a stream.
 **Sequence diagram**
-![](../../../img/00_Implementing_interactive_live_for_Android_049.png)
+![Image](../../../img/00_Implementing_interactive_live_for_Android_049.png)
+
 **Sample code**
 
 1. Create an RTC engine, set the local preview, and configure the encoding parameters.
@@ -334,7 +336,8 @@ To co-host either with audience members or a host from another live room (host P
 3. Start pushing mixed RTC streams to CDN.
 
 **Sequence diagram**
-![](../../../img/00_Implementing_interactive_live_for_Android_050.png)
+
+![Image](../../../img/00_Implementing_interactive_live_for_Android_050.png)
 **Sample code**
 
 1. Stop streaming with the live pusher.

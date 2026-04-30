@@ -21,6 +21,7 @@ Online KTV is an interactive karaoke solution provided in VideoOne, which incorp
 | In-ear monitor | When wearing wired headphones, a performer can enable the "in-ear monitor" feature to hear their own voice. The monitoring volume is also adjustable. |
 | Seat control | The host can invite audience members to guest seats, remove users from guest seats, mute or unmute guests, and block seats. |
 | Soundwave effects display | Using RTC volume callbacks, you can apply soundwave visual effects to the avatars of singers and speaking guests. |
+
 ## Architecture
 ![Image](../../img/00_[hide]Solution_overview_087.png)
 ## Implementation

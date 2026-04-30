@@ -105,6 +105,7 @@ Within the project folder, navigate to the `/Server/conf` directory, open the `c
 | rtc_app_key | String | The **AppKey** of your BytePlus RTC app. | 1bfaa8e********fjc07d |
 | ktv_timer_enable | Boolean | Specifies whether to automatically end a KTV room session after the duration set in `ktv_experience_time`. <br>  <br> * true: Enable automatic ending <br> * false: Disable automatic ending | true |
 | ktv_experience_time | Integer | The session duration in minutes. The session ends automatically when this time is reached. This setting requires `ktv_timer_enable` to be `true`. | 20 |
+
 ### Preparing music files
 Follow the steps below to prepare some music files in your database:
 ```SQL
@@ -122,6 +123,7 @@ VALUES
 | cover_url | String | The download URL for the song cover. | https://xxxxx |
 | song_lrc_url | String | The download URL for the lyrics file. | https://xxxxx |
 | song_file_url | String | The download URL for the song file. | https://xxxxx |
+
 ### Deploying the project 
 Under the root directory, run the following command to compile and deploy the project:
 ```Shell

@@ -4,6 +4,7 @@ To quickly build a short drama video feature for your web application, you can u
 | **Feature Description** | **Environment Requirements** | **Development Tasks** | **Time to market** |
 | --- | --- | --- | --- |
 | Built with components designed for short drama videos, this solution supports features like episode switching, seamless playback resumption between pages, and unlocking paid content. | * Node version: 20 or above. <br> * Device requirement: Only mobile Android and iOS devices are supported. Foldable phones are not supported. | Replace the business APIs and convert data structures for the app | As little as one week |
+
 # Integrating the short drama demo
 ## Step 1: Download the source code
 Run the following commands to download the source code to your local device:
@@ -112,6 +113,7 @@ To implement short drama videos, the short drama demo has defined the following 
 |  | like | int | Optional | Number of likes |
 |  | createTime | String | Optional | Creation time |
 |  |  liked | boolean | Optional | Indicates whether the user has liked the comment. |
+
 ### Replace the APIs
 Replace the corresponding APIs in the file `src/service/path.ts`.
 ```JavaScript

@@ -1,5 +1,5 @@
 This media up and down swiping solution utilizes the playback functions of live stream and Video on Demand (VOD). It supports mixed playback of videos and live streams, as well as playlists consisting solely of videos or live streams. Media playback can be switched by an up-slide gesture. The solution also includes features such as likes, comments, and live room gifting. With this comprehensive solution, you can rapidly develop your own application.
-![](../../img/00_Solution_overview_073.mp4)
+![🔴 Video (preview unavailable)](../../img/00_Solution_overview_073.mp4)
 # Highlights
 
 * Combined with the exclusive Zero First Frame technology, the solution leverages capabilities such as pre-rendering, pre-loading, and start-play selection to achieve instant video playback, seamless transitions, and a smooth up-and-down swiping and viewing experience.

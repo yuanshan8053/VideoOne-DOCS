@@ -78,6 +78,7 @@ Within the project folder, navigate to the `/Server/conf` directory, open the co
 | live_pull_domain  | String  | http://{domain_name}, where "domain_name" represents the **stream pull domain**.  | http://pull-demo.com |
 | live_push_domain  | String  | rtmp://{domain_name}, where "domain_name" represents the **stream push domain**.  | rtmp://push-demo.com |
 | live_stream_key  | String  | The **Primary key** for URL authentication.  | DLH********KDF  |
+
 ## Step 3: Preparing VOD media files
 
 1. Follow the steps below to prepare some VOD media files. You can refer to [Getting started with BytePlus VOD](https://docs.byteplus.com/en/byteplus-vod/docs/getting-started?version=v1.0) for more detailed instructions. 
@@ -98,6 +99,7 @@ VALUES
 | **Parameter** | **Data type** | **Description** | **Example** |
 | --- | --- | --- | --- |
 | vid  | String  | The video ID.  | v110exxdg  |
+
 ## Step 4: Preparing live streaming media
 
 1. Here we use relay tasks provided by BytePlus MediaLive to generate live streams. You can refer to [Configuring a relay task](https://docs.byteplus.com/en/docs/byteplus-media-live/docs-relay) for more detailed instructions. 
@@ -120,6 +122,7 @@ VALUES
 | stream_id | String | The stream ID of live stream. | xxxx |
 | room_desc | String | The description of the live room. | This is Jack's Live Room |
 | cover_url | String | The cover image URL of the live room.  | https://xxxxx |
+
 ## Step 5: Deploying the project 
 Under the root directory, run the following command to compile and deploy the project: 
 ```Shell

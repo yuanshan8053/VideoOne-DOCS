@@ -238,6 +238,7 @@ public class PlaybackController {
 
         if (mStartOnReadyCommand != null // startPlayback but surface not ready
                 || attachedPlayer != null
+
         ) {
             L.d(this, "stopPlayback");
 

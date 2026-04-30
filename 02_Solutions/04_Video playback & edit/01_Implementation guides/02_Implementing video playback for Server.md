@@ -86,6 +86,7 @@ Within the project folder, navigate to the `/Server/conf` directory, open the `c
 | secret_access_key | String | The **Secret Access Key (SK)** of your BytePlus account. | 8dk39vK********k7D== |
 | vod_space | String | The name of the BytePlus VOD space where you upload your media files. | videoone |
 | vod_play_list_id | String | ID of the video playlist. <br> This parameter is only required if you need the video playlist function. You should call [CreatePlaylist](https://docs.byteplus.com/en/byteplus-vod/reference/createplaylist?version=v1.0) first to create a video playlist. You can then find the ID in the `result` parameter of the response. | pb2d0****** |
+
 ## Step 3: Preparing media files
 
 1. Follow the steps below to prepare some media files. You can refer to [Getting started with BytePlus VOD](https://docs.byteplus.com/en/byteplus-vod/docs/getting-started?version=v1.0) for more detailed instructions.
@@ -109,6 +110,7 @@ VALUES
 | video_type | Integer | The video type. You can select the type according to the length of the video. <br>  <br>    * `0`: Short video. Videos of this category will be displayed and played on the **Home** tab within the app. <br>    * `1`: Medium video. Videos of this category will be displayed and played on the **Feed** tab within the app. <br>    * `2`: Long video. Videos of this category will be displayed and played on the **Channel** tab within the app. | 0 |
 | anti_screenshot_and_record | Integer | Whether to enable anti-screen recording. <br>  <br>    * `0`: Disable <br>    * `1`: Enable | 0 |
 | support_smart_subtitle | Integer | Whether to enable smart subtitling function. <br>  <br>    * `0`: Disable <br>    * `1`: Enable | 0 |
+
 ## Step 4: Deploying the project 
 Under the root directory, run the following command to compile and deploy the project:
 ```Shell

@@ -127,6 +127,7 @@ When initializing the SDK, set the following parameters:
 | LicenseUri | String | Yes | None | The path to your license. You need to put your license in the app/assets folder, and then set the LicenseUri parameter as the path to your license, such as assets/license/vod.lic. <br> For more information on the license, see [Android Player SDK: License guide](https://docs.byteplus.com/en/docs/byteplus-vod/docs-license-guide-android). |
 | CacheDirPath | String | No | /data/user/0/<package_name>/cache/video_cache | The path for caching videos. |
 | MaxCacheSize | Int | No | 300 * 1024 * 1024 (300 MB) | The maximum size in bytes of the folder for caching videos. |
+
 ### Step 2: Create a player instance
 Create a player instance with the `TTVideoEngine` class, as follows:
 ```Java
@@ -237,6 +238,7 @@ When assembling the video source, set the following parameters:
 | PlayAuthToken | String | Yes | None | The playback token. |
 | EncodeType | Int | No | CODEC_TYPE_H264 | The codec type: <br>  <br> * H.264 (Default) <br> * ByteVC1 (Only available in the Premium Edition of the SDK) |
 | Resolution | Resolution | No | Standard | The video resolution. See the table below. |
+
 Resolution
 
 | Member | Video quality | Audio quality |
@@ -248,6 +250,7 @@ Resolution
 | TwoK | 2K | This parameter does not affect audio quality. |
 | FourK | 4K | This parameter does not affect audio quality. |
 | Auto | For DASH videos, the player automatically decides the best resolution based on the viewer's network connection and adjusts the quality of the video throughout playback to minimize the risk of buffering. | This parameter does not affect audio quality. |
+
 #### Play a video with the HTTP URL
 If you upload your videos to the BytePlus VOD service or a third-party storage service, you can play them using the HTTP URL. You need to set the `url` parameter.
 See the following sample code:
@@ -280,6 +283,7 @@ When assembling the video source, set the following parameters:
 | Vid | String | Yes | None | The video ID. |
 | Url | String | Yes | None | The HTTP URL of the video. |
 | CacheKey | String | Yes | None | The cache key, which must meet the following requirements: <br>  <br> * It should not contain any special characters and can be used as a file name. <br> * Every video has a unique cache key. <br>  <br> It is recommended to use the MD5 of the URL as the cache key. |
+
 #### Play a local video
 If you play a local video, assign the local address to the `videoFile` parameter. See the following sample code:
 ```Java
@@ -416,6 +420,7 @@ After the upload is complete, the file path in cloud storage is as follows:
 | FilePrefix | The file prefix must end with `/`, such as `"path/to/foo/bar/"`. |
 | FileTitle | The file name. If not set, the SDK will automatically generate a 32-bit string as the file name. |
 | FileExtension | The file suffix must start with `.`, such as `".mp4"`. |
+
 When setting the storage path, you can specify either the full path or just the file prefix and suffix.
 
 * Call `setFileName` to set the full path. Please ensure that the full path must contain a suffix, such as `.mp4` or`.mp3`, as an error will occur otherwise.

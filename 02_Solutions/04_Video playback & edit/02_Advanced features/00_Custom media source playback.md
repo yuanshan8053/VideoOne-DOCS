@@ -1,6 +1,6 @@
 BytePlus VideoOne demo supports custom source video playback. By inputting specific video IDs or URLs, you can play specified videos in either short-form or medium-form with customization.
 # Demonstration
-![](../../../img/00_Custom_media_source_playback_085.png)
+![🔴 Video (preview unavailable)](../../../img/00_Custom_media_source_playback_085.png)
 
 # Instruction
 
@@ -43,6 +43,7 @@ BytePlus VideoOne demo supports custom source video playback. By inputting speci
       | playAuthToken | Yes when the type is 0 | Video playback token. <br> Refer to the code in [demo_auth_token_test.go](https://github.com/byteplus-sdk/byteplus-sdk-golang/blob/master/example/vod/demo_auth_token_test.go) file to obtain the token. | Before obtaining the video source information, make sure to download the [BytePlus VOD Server SDK](https://docs.byteplus.com/en/byteplus-vod/docs/go-sdk?version=v1.0) as a prerequisite. |
       | httpUrl | Yes when the type is 1 | Video URL. <br> Refer to the code in [demo_vod_play_service_test.go](https://github.com/byteplus-sdk/byteplus-sdk-golang/blob/master/example/vod/demo_vod_play_service_test.go) file to obtain the URL. |  |
       | title | Yes | Custom video title. | / |
+
 4. Tap on **ENTER SHORT VIDEO** to start playing the video(s) as a short-form video or **ENTER FEED VIDEO** as a medium-form feed video.
 
 # Implementation

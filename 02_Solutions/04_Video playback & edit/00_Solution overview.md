@@ -1,5 +1,5 @@
 Video Playback offers a comprehensive suite of audio and video services, including features such as video effects, media uploading and management, multimedia processing, accelerated content distribution, and video playback functionality. By leveraging the infrastructure and media processing capabilities provided by BytePlus VOD, you can quickly build on-demand platforms and applications while focusing on meeting business needs and enhancing user experience.
-![](../../img/00_Solution_overview_077.png)
+![🔴 Video (preview unavailable)](../../img/00_Solution_overview_077.png)
 
 ## Billing
 Using this solution incurs charges for the VOD service. For VOD pricing information, please refer to [BytePlus VOD pricing overview](https://docs.byteplus.com/en/byteplus-vod/docs/pricing). 

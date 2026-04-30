@@ -1,6 +1,7 @@
 This document provides a comprehensive list of the SDKs integrated into each release of the VideoOne demo app. By following the version combinations stated in this article, you can ensure a smooth integration process without encountering any dependency conflicts or compatibility issues that may arise from integrating different BytePlus SDKs.
 ## Version 5.3.0-5.4.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDKFramework | 1.48.200.2-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -13,7 +14,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | TTVideoEditor | 11.8.1.83-D | N/A | Video shooting | N/A |
 | TTNetworkManager | 4.2.210.20 | N/A | Network | Basic component |
 | MediaAdsToB | 2.0.1 | N/A | CSAI in MiniDrama | Adapter between google-ima-sdk and BytePlus VOD |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull_premium | 1.49.300.4 | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -32,6 +35,7 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 
 ## Version 5.2.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDKFramework | 1.43.300.2-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -43,7 +47,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | effect-sdk | 4.4.3_standard | N/A | Video effects, such as beauty AR and filters | N/A |
 | TTVideoEditor | 11.8.1.83-D | N/A | Video shooting | N/A |
 | TTNetworkManager | 4.1.127.43 | N/A | Network | Basic component |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull_rtc | 1.43.300.3 | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -56,8 +62,10 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | com.squareup.okhttp3 | okhttp | 4.12.0 | N/A | Basic component |
 | commons-net | commons-net | 3.9.0 | N/A | Basic component |
 | com.byteplus | BytePlusRTC | 3.58.1.20600 | * RTM stream pulling <br> * Interactive Live <br> * KTV <br> * Chorus <br> * Meida up and down swiping | N/A |
+
 ## Version 4.0.0–5.0.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDK | 1.43.300.2-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -67,7 +75,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 |  |  | Uploader | VOD upload | N/A |
 |  |  | Player | VOD playback | N/A |
 | effect-sdk | 4.4.3_standard | N/A | Video effects, such as beauty AR and filters | N/A |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull_rtc | 1.43.300.3 | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -80,8 +90,10 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | com.squareup.okhttp3 | okhttp | 4.12.0 | N/A | Basic component |
 | commons-net | commons-net | 3.9.0 | N/A | Basic component |
 | com.byteplus | BytePlusRTC | 3.58.1.20600 | * RTM Streaming pulling <br> * Interactive Live <br> * KTV <br> * Chorus <br> * Meida up and down swiping |  |
+
 ## Version 3.3.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDK | 1.41.300.203-rtc | LivePull-RTS | Streaming pulling | N/A |
@@ -93,7 +105,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | effect-sdk | 4.4.3_standard | N/A | Video effects, such as beauty AR and filters | N/A |
 | TTVideoEditor | 11.8.1.83-D | N/A | Video shooting | N/A |
 | TTNetworkManager | 5.0.29.2-adu | N/A | N/A | Basic component |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull | 1.41.300.201-rtc | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -105,8 +119,10 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | com.bytedance.applog | RangersAppLog-Lite-global | 6.14.3 | N/A | Basic component |
 | com.squareup.okhttp3 | okhttp | 4.12.0 | N/A | Basic component |
 | commons-net | commons-net | 3.9.0 | N/A | Basic component |
+
 ## Version 3.0.0–3.1.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDK | 1.40.200.5-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -121,7 +137,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | DVEInject | 0.0.5 | N/A | N/A | Basic component |
 | AudioSdkTob | 5.0.7-alpha.1-tobonekit | N/A | Audio effects | Basic component |
 | TTNetworkManager | 5.0.29.2-adu | N/A | N/A | Basic component |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull | 1.39.100.9.onekit | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -139,8 +157,10 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 |  | NLETemplateModel | 4.0.2 | N/A | Basic component |
 |  | NLEEditor | 4.0.2 | N/A | Basic component |
 |  | NLEProcessor | 4.0.2 | N/A | Basic component |
+
 ## Version 2.4.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDK | 1.40.200.5-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -154,7 +174,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | DVEInject | 0.0.5 | N/A | N/A | Basic component |
 | AudioSdkTob | 5.0.7-alpha.1-tobonekit | N/A | Audio effects | Basic component |
 | TTNetworkManager | 5.0.29.2-adu | N/A | N/A | Basic component |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull | 1.39.100.9.onekit | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -172,8 +194,10 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 |  | NLETemplateModel | 4.0.2 | N/A | Basic component |
 |  | NLEEditor | 4.0.2 | N/A | Basic component |
 |  | NLEProcessor | 4.0.2 | N/A | Basic component |
+
 ## Version 2.0.0~2.3.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | TTSDK | 1.37.200.5-premium | LivePull-RTS | Streaming pulling | N/A |
@@ -187,7 +211,9 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 | DVEInject | 0.0.5 | N/A | N/A | Basic component |
 | AudioSdkTob | 5.0.7-alpha.1-tobonekit | N/A | Audio effects | Basic component |
 | TTNetworkManager | 5.0.29.2-adu | N/A | N/A | Basic component |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull | 1.37.200.6.onekit | Streaming pulling | Dependencies: commons-net, okhttp |
@@ -205,15 +231,19 @@ This document provides a comprehensive list of the SDKs integrated into each rel
 |  | NLETemplateModel | 4.0.2 | N/A | Basic component |
 |  | NLEEditor | 4.0.2 | N/A | Basic component |
 |  | NLEProcessor | 4.0.2 | N/A | Basic component |
+
 ## Version 1.0.0
 ### iOS
+
 | **Pod** | **Version** | **Subspec** | **Related feature** |
 | --- | --- | --- | --- |
 | TTSDK | 1.37.200.5-premium | LivePull-RTS | Stream pulling |
 |  |  | LivePush-RTS | Stream pushing |
 |  |  | RTC-Framework | Real-time audio/video interaction |
 | effect-sdk | 4.4.3_standard | N/A | Video effects, such as beauty AR and filters. [Contact your sales representative](https://www.byteplus.com/en/contact) to obtain the BytePlus Effects SDK. |
+
 ### Android
+
 | **Group ID** | **Artifact ID** | **Version** | **Related feature** | **Note** |
 | --- | --- | --- | --- | --- |
 | com.bytedanceapi | ttsdk-ttlivepull | 1.37.200.5 | Stream pulling | Dependencies: commons-net, okhttp |

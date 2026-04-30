@@ -24,6 +24,7 @@ This section provides an overview of the player configurations in the demo.
 | controls | boolean | true | Control bar plugin, registered by default. |
 | ignores | string[] | [] | Used to disable plugins. VePlayer has built-in plugins for various common functionalities. To disable a specific built-in plugin, you can provide the plugin name (case-insensitive) as a parameter. |
 | start | ```JSON <br> { <br>   disableAnimate: boolean, <br>   isShowPause: boolean, <br> } <br> ``` <br>  | false | Button to toggle play/pause in the center of the player. <br> `disableAnimate`: Whether to disable click animation. <br>  <br> * true: Yes <br> * false: No (default) <br>  <br> `isShowPause`: Whether to keep the interface visible when paused. <br>  <br> * true: Yes <br> * false: No (default) |
+
 ## Multiple languages configuration
 To modify translation or add multiple languages, you can modify the configurations in the `translation.ts` file, or utilize libraries that implement internationalization features, such as [@formatjs/intl](https://www.npmjs.com/package/@formatjs/intl).
 ## Deployment

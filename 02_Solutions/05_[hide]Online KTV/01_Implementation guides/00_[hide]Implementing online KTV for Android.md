@@ -170,6 +170,7 @@ private final IRTCRoomEventHandler mIRTCRoomEventHandler = new IRTCRoomEventHand
 | Set the default audio playback device to the speaker or earpiece. | [setDefaultAudioRoute](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#RTCVideo-setdefaultaudioroute) |
 | Enable audio properties reporting (e.g., volume).  | [enableAudioPropertiesReport](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#RTCVideo-enableaudiopropertiesreport) |
 | Join the RTC room. | [joinRoom](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#RTCRoom-joinroom) |
+
 ##### Callback
 
 | Feature | Callback |
@@ -177,6 +178,7 @@ private final IRTCRoomEventHandler mIRTCRoomEventHandler = new IRTCRoomEventHand
 | Callback triggered when the local user successfully joins the room. | [onRoomStateChanged](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCRoomEventHandler-onroomstatechanged) |
 | Callback for the local user's volume. | [onLocalAudioPropertiesReport](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCVideoEventHandler-onlocalaudiopropertiesreport) |
 | Callback for the remote user's volume. | [onRemoteAudioPropertiesReport](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCVideoEventHandler-onremoteaudiopropertiesreport) |
+
 ### Lyrics synchronization
 #### Sequence diagram
 ![](../../../img/00_[hide]Implementing_online_KTV_for_Android_090.png)
@@ -284,6 +286,7 @@ public void onAudioMixingStateChanged(int mixId, AudioMixingState state, AudioMi
 | Start playing the music file. | [startAudioMixing](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#IAudioMixingManager-startaudiomixing) |
 | Set the interval for music playback progress callback. | [setAudioMixingProgressInterval](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#IAudioMixingManager-setaudiomixingprogressinterval) |
 | Send audio stream synchronization information. | [sendStreamSyncInfo](https://docs.byteplus.com/en/byteplus-rtc/docs/70080#RTCVideo-sendstreamsyncinfo) |
+
 ##### Callback
 
 | Feature | Callback |
@@ -291,6 +294,7 @@ public void onAudioMixingStateChanged(int mixId, AudioMixingState state, AudioMi
 | Callback for music playback progress. | [onAudioMixingPlayingProgress](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCVideoEventHandler-onaudiomixingplayingprogress) |
 | Callback for audio synchronization information. | [onStreamSyncInfoReceived](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCVideoEventHandler-onstreamsyncinforeceived) |
 | Callback for music file playback state changes. | [onAudioMixingStateChanged](https://docs.byteplus.com/en/byteplus-rtc/docs/70081#IRTCVideoEventHandler-onaudiomixingstatechanged) |
+
 ### Audio control
 #### User interface demonstration
 ![Image](../../../img/00_[hide]Implementing_online_KTV_for_Android_091.png)

@@ -108,6 +108,7 @@ When initializing the SDK, set the following parameters:
 | appId | String | Yes | None | The app ID. You can get the app ID on the **SDK** **management** > **Applications** page in the [BytePlus VOD console](https://console.byteplus.com/vodpaas/). |
 | licenseName | String | Yes | None | The path to your license. You need to put your license in the app/assets folder, and then set the LicenseUri parameter as the path to your license, such as assets/license/vod.lic. <br> For more information on the license, see [iOS Player SDK: License guide](https://docs.byteplus.com/en/docs/byteplus-vod/docs-license-guide-ios) |
 | cacheMaxSize | Int | No | 300 * 1024 * 1024 (300 MB) | The maximum size in bytes of the folder for caching videos. |
+
 ### Step 2: Create a player instance
 Create a player instance with the `TTVideoEngine` class, as follows:
 ```objectivec
@@ -157,6 +158,7 @@ The SDK supports playing both local and online videos. The following section int
    | Vid | String | Yes | None | The video ID. |
    | PlayAuthToken | String | Yes | None | The playback token. |
    | Resolution | Int | No | Standard | The video resolution. See the table below. |
+
    Resolution
 
    | Enum | Video quality | Audio quality |
@@ -168,6 +170,7 @@ The SDK supports playing both local and online videos. The following section int
    | TTVideoEngineResolutionType2K | 2K | This parameter does not affect audio quality. |
    | TTVideoEngineResolutionType4K | 4K | This parameter does not affect audio quality. |
    | TTVideoEngineResolutionTypeAuto | For DASH videos, the player automatically decides the best resolution based on the viewer's network connection and adjusts the quality of the video throughout playback to minimize the risk of buffering. | This parameter does not affect audio quality. |
+
 * #### Play a video with the HTTP URL <span id="undefined"></span>  <span id="undefined"></span> 
    If you upload your videos to the BytePlus VOD service or a third-party storage service, you can play them with the HTTP URL. You need to set the `url` parameter.
    See the following sample code:
@@ -187,6 +190,7 @@ The SDK supports playing both local and online videos. The following section int
    | --- | --- | --- | --- | --- |
    | Url | String | Yes | None | The HTTP URL of the video. |
    | CacheKey | String | Yes | None | The cache key, which must meet the following requirements: <br>  <br> * It should not contain any special characters and can be used as a file name. <br> * Every video has a unique cache key. <br>  <br> It is recommended to use the MD5 value of the URL as the cacheKey. |
+
 * #### Play a local video <span id="undefined"></span>  <span id="undefined"></span> 
    If you play a local video, assign the local address to the `localVideoPath` parameter. See the following sample code:
    ```objectivec
@@ -326,6 +330,7 @@ After the upload is complete, the file path in cloud storage is as follows:
 | FilePrefix | The file prefix must end with a forward slash (/), such as `path/to/foo/bar/`. |
 | FileTitle | The file name. If not set, the SDK will automatically generate a 32-bit string as the file name. |
 | FileExtension | The file suffix must start with a period (.), such as `.mp4`. |
+
 When setting the storage path, you can specify either the full path or just the file prefix and suffix.
 
 * Call `setFileName` to set the full path. The full path must include a file extension (e.g., `.mp4` or `.mp3`); otherwise, an error will occur.

@@ -161,6 +161,7 @@ You can use the following code to request permission for microphone access:
 | Set the default audio route to the speaker or earpiece. | [setDefaultAudioRoute:](https://docs.byteplus.com/en/byteplus-rtc/docs/70086#ByteRTCVideo-setdefaultaudioroute) |
 | Enable the audio properties report. | [enableAudioPropertiesReport:](https://docs.byteplus.com/en/byteplus-rtc/docs/70086#ByteRTCVideo-enableaudiopropertiesreport) |
 | Join the RTC room. | [joinRoom:userInfo:roomConfig:](https://docs.byteplus.com/en/byteplus-rtc/docs/70086#ByteRTCRoom-joinroom-userinfo-roomconfig) |
+
 ##### Callback
 
 | Feature | Callback |
@@ -168,6 +169,7 @@ You can use the following code to request permission for microphone access:
 | Callback for room state changes, such as the result of joining the room. | [rtcRoom:onRoomStateChanged:uid:state:extraInfo](https://docs.byteplus.com/en/byteplus-rtc/docs/70085#ByteRTCRoomDelegate-rtcroom-onroomstatechanged-withuid-state-extrainfo) |
 | Callback for the local user's volume. | [rtcEngine:onLocalAudioPropertiesReport:](https://docs.byteplus.com/en/byteplus-rtc/docs/70085#ByteRTCVideoDelegate-rtcengine-onlocalaudiopropertiesreport) |
 | Callback for the remote user's volume. | [rtcEngine:onRemoteAudioPropertiesReport:totalRemoteVolume:](https://docs.byteplus.com/en/byteplus-rtc/docs/70085#ByteRTCVideoDelegate-rtcengine-onremoteaudiopropertiesreport-totalremotevolume) |
+
 ### Lyrics synchronization
 #### Sequence diagram
 
@@ -261,6 +263,7 @@ You can use the following code to request permission for microphone access:
 | Set the event handler. | [setEventHandler:](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70086#ByteRTCAudioEffectPlayer-seteventhandler) |
 | Set the interval for music playback progress callback. | [setProgressInterval:](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70086#ByteRTCMediaPlayer-setprogressinterval) |
 | Send audio stream synchronization information. | [sendStreamSyncInfo:config:](https://docs.byteplus.com/en/byteplus-rtc/docs/70086#ByteRTCVideo-sendstreamsyncinfo-config) |
+
 ##### Callback
 
 | Feature | Callback |
@@ -268,6 +271,7 @@ You can use the following code to request permission for microphone access:
 | Callback for music playback progress. | [onMediaPlayerPlayingProgress:progress:](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70087#ByteRTCMediaPlayerEventHandler-onmediaplayerplayingprogress-progress) |
 | Callback for audio synchronization information. | [rtcEngine:onStreamSyncInfoReceived:streamType:data:](https://docs.byteplus.com/en/byteplus-rtc/docs/70085#ByteRTCVideoDelegate-rtcengine-onstreamsyncinforeceived-streamtype-data) |
 | Callback for music file playback state changes. | [onMediaPlayerStateChanged:state:error:](https://docs.byteplus.com/en/docs/byteplus-rtc/docs-70087#ByteRTCMediaPlayerEventHandler-onmediaplayerstatechanged-state-error) |
+
 ### Audio control
 #### User interface demonstration
 ![Image](../../../img/01_[hide]Implementing_online_KTV_for_iOS_095.png)

@@ -90,6 +90,7 @@ Within the project folder, navigate to the `/Server/conf` directory, open the co
 | port  | String  | The port number used by this app service. In most cases, you can set it to 8080.  | 8080  |
 | access_key  | String  | The **Access Key ID (AK)** of your BytePlus account.  | AKAPZ7******FK4k9  |
 | secret_access_key  | String  | The **Secret Access Key (SK)** of your BytePlus account.  | 8dk39vK********k7D==  |
+
 ## Step 3: Preparing VOD media files 
 Follow the steps below to prepare VOD media files. For more detailed instructions, you can refer to [Getting started with BytePlus VOD](https://docs.byteplus.com/en/byteplus-vod/docs/getting-started?version=v1.0).
 
