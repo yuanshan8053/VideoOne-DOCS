@@ -11,7 +11,7 @@ To build an interactive live streaming app on Android, you can use the BytePlus 
 * You have obtained a BytePlus MediaLive SDK license.
    * For detailed instructions on how to acquire the license, see [Accessing your SDK license](https://docs.byteplus.com/en/docs/byteplus-media-live/docs-sdk-management#accessing-your-sdk-license).
    * To learn more about choosing the right license type for your needs, please refer to [SDK introduction](https://docs.byteplus.com/en/docs/byteplus-media-live/docs-introduction).
-* You have obtained the BytePlus MediaLive SDK package. To access the interactive live feature, you must use the Interactive edition of the SDK. See [Accessing your SDK package](https://docs.byteplus.com/en/docs/byteplus-media-live/docs-sdk-management#accessing-your-sdk-package) for more information.
+* You have obtained the BytePlus MediaLive SDK package. See [Accessing your SDK package](https://docs.byteplus.com/en/docs/byteplus-media-live/docs-sdk-management#accessing-your-sdk-package) for more information.
 
 ## Integrating the SDKs
 This section introduces how to integrate BytePlus MediaLive Broadcast and Player SDKs into your Android project.
@@ -53,7 +53,6 @@ This section introduces how to integrate BytePlus MediaLive Broadcast and Player
        ......
        // Add the online integration address of the SDK.
       ttsdkVersion = '1.43.300.3'
-      implementation "com.bytedanceapi:ttsdk-ttlivepush_rtc:$ttsdkVersion"
       implementation "com.bytedanceapi:ttsdk-ttlivepull_rtc:$ttsdkVersion"
       implementation "com.bytedanceapi:ttsdk-ttcommon:$ttsdkVersion"
       implementation "com.bytedanceapi:ttsdk-ttlicense2:$ttsdkVersion"
@@ -204,7 +203,7 @@ By default, automatic SDK log uploading is enabled for debugging and analysis. T
 ## Implementing the feature for the host
 This section provides instructions on implementing the interactive live streaming feature for the host.
 ### Starting the live stream
-The host uses both the RTC engine and the live pusher to start a stream.
+The host uses the RTC engine to start a stream.
 **Sequence diagram**
 ![Image](../../../img/00_Implementing_interactive_live_for_Android_049.png)
 
@@ -227,40 +226,7 @@ The host uses both the RTC engine and the live pusher to start a stream.
    mRTCVideo.setVideoEncoderConfig(config);  
    ```
 
-2. Subscribe to the local audio and video data captured with the RTC engine.
-   ```Java
-   // Subscribe to the local video data
-   mRTCVideo.setLocalVideoSink(StreamIndex.STREAM_INDEX_MAIN, mVideoFrameListener, IVideoSink.PixelFormat.I420);
-   
-   // Subscribe to the local audio data
-   mRTCVideo.enableAudioFrameCallback(AudioFrameCallbackMethod.AUDIO_FRAME_CALLBACK_RECORD,
-           new AudioFormat(changeSampleRate(mConfig.mAudioCaptureSampleRate),
-                   changeChannel(mConfig.mAudioCaptureChannel)));
-   mRTCVideo.registerAudioFrameObserver(mAudioFrameListener);
-   ```
-
-3. Create a live pusher and configure its encoding parameters.
-   ```Java
-   // Create a live pusher
-   VeLivePusherConfiguration config = new VeLivePusherConfiguration()
-           .setContext(AppUtil.getApplicationContext())
-           .setReconnectCount(10);
-   mLivePusher = config.build();
-   
-   // Configure the encoding parameters for stream pushing
-   VeLivePusherDef.VeLiveVideoEncoderConfiguration videoEncoderConfig = mLivePusher.getVideoEncoderConfiguration()
-           .setResolution(resolution)
-           .setFps(fps)
-           .setBitrate(defaultBitrate)
-           .setCodec(VeLiveVideoCodecH264)
-           .setEnableAccelerate(true);
-   mLivePusher.setVideoEncoderConfiguration(videoEncoderConfig);
-   mLivePusher.setProperty("VeLiveKeyBitrateAdaptStrategy", "NORMAL");
-   mLivePusher.startVideoCapture(VeLiveVideoCaptureExternal);
-   mLivePusher.startAudioCapture(VeLiveAudioCaptureExternal);
-   ```
-
-4. Start audio and video capture with the RTC engine.
+2. Start audio and video capture with the RTC engine.
    ```Java
    // Start video capture
    mRTCVideo.startVideoCapture();
@@ -269,100 +235,34 @@ The host uses both the RTC engine and the live pusher to start a stream.
    mRTCVideo.startAudioCapture();
    ```
 
-5. Start stream pushing with the live pusher.
-   ```Java
-   // Start stream pushing. Set 'url' to an RTMP push stream address.
-   mLiveCore.start(url);
-   mLivePusher.startPushWithUrls(urls.toArray(new String[0]));
-   ```
-
-6. Send the local audio and video data captured with the RTC engine to the live pusher.
-   ```Java
-   // Send the local video data to the live pusher
-   IVideoSink mVideoFrameListener = new IVideoSink() {
-       @Override
-       public void onFrame(com.ss.bytertc.engine.video.VideoFrame frame) {
-           final int width = frame.getWidth();
-           final int height = frame.getHeight();
-           final int chromaHeight = (height + 1) / 2;
-           final int chromaWidth = (width + 1) / 2;
-           final VideoRotation rotation = frame.getRotation();
-           int bufferSize = width * height + chromaWidth * chromaHeight * 2;
-           final ByteBuffer dstBuffer = ByteBuffer.allocateDirect(bufferSize);
-           YuvHelper.I420Rotate(frame.getPlaneData(0), frame.getPlaneStride(0),
-                                frame.getPlaneData(1), frame.getPlaneStride(1),
-                                frame.getPlaneData(2), frame.getPlaneStride(2),
-                                dstBuffer,width, height,frame.getRotation().value());
-   
-           dstBuffer.position(0);
-           final boolean needSwapWidthHeight = (rotation == VideoRotation.VIDEO_ROTATION_90 || rotation == VideoRotation.VIDEO_ROTATION_270);
-           final int dstWidth = needSwapWidthHeight ? height : width;
-           final int dstHeight = needSwapWidthHeight ? width : height;
-   
-           VeLiveVideoFrame liveVideoFrame = new VeLiveVideoFrame(
-                   dstWidth,
-                   dstHeight,
-                   System.currentTimeMillis() * 1000,
-                   dstBuffer
-           );
-           mLivePusher.pushExternalVideoFrame(liveVideoFrame);
-           liveVideoFrame.release();
-       }
-   };
-   
-   // Send the local audio data to the live pusher
-   mAudioFrameListener = new IAudioFrameObserver() {
-       @Override
-       public void onRecordAudioFrame(IAudioFrame audioFrame) {
-           VeLiveAudioFrame frame = new VeLiveAudioFrame(
-                   convertFrom(audioFrame.sample_rate()),
-                   convertFrom(audioFrame.channel()),
-                   System.currentTimeMillis() * 1000,
-                   audioFrame.getDataBuffer());
-           mLivePusher.pushExternalAudioFrame(frame);
-       }
-   
-   };
-   ```
-
-
-### Enabling beauty AR (Optional)
-Refer to [Effects](https://docs.byteplus.com/en/byteplus-rtc/docs/114717) for detailed instructions on how to implement beauty AR by using the RTC engine.
-### Enabling co-hosting
-To co-host either with audience members or a host from another live room (host PK battle), do the following:
-
-1. Stop streaming with the live pusher.
-2. Join an RTC room.
-3. Start pushing mixed RTC streams to CDN.
-
-**Sequence diagram**
-
-![Image](../../../img/00_Implementing_interactive_live_for_Android_050.png)
-**Sample code**
-
-1. Stop streaming with the live pusher.
-   ```Java
-   mLivePusher.stopPush();
-   ```
-
-2. Create an RTC room, set the user information, and join the room. Refer to [Authentication with Token](https://docs.byteplus.com/en/byteplus-rtc/docs/70121) for details about how to get the token from the app server.
+3. Create an RTC room, set the user information, and join the room.
    ```Java
    // Create an RTC room
    mRTCRoom = mRTCVideo.createRTCRoom(roomId);
    mRTCRoom.setRTCRoomEventHandler(mIRtcRoomEventHandler);
    
    // Set the user information
-   mUserId = userId;
-   mRoomId = roomId;
    UserInfo userInfo = new UserInfo(userId, null);
    RTCRoomConfig roomConfig = new RTCRoomConfig(ChannelProfile.CHANNEL_PROFILE_COMMUNICATION,
            true, true, true);
-           
+   roomConfig.isAutoPublishAudio = true;
+   roomConfig.isAutoPublishVideo = true;
+   roomConfig.userVisibility = true;
+   
    // Join the room. Get the token from the app server.
    mRTCRoom.joinRoom(token, userInfo, roomConfig);
    ```
+   
+   The following table describes the parameters for `RTCRoomConfig`:
 
-3. Start pushing mixed RTC streams to CDN after successfully joining the room.
+   | **Parameter** | **Required** | **Data Type** | **Description** | **Example** |
+   | --- | --- | --- | --- | --- |
+   | ChannelProfile | Yes | ChannelProfile | The channel profile. For interactive live streaming, use `CHANNEL_PROFILE_COMMUNICATION`. | `CHANNEL_PROFILE_COMMUNICATION` |
+   | isAutoPublishAudio | Yes | boolean | Whether to automatically publish audio. Set to `true` for the host. | `true` |
+   | isAutoPublishVideo | Yes | boolean | Whether to automatically publish video. Set to `true` for the host. | `true` |
+   | userVisibility | Yes | boolean | Whether the user is visible to other users in the room. Set to `true` for the host. | `true` |
+
+4. Start pushing the mixed stream to CDN after successfully joining the room.
    ```Java
    // Notification of a successful join room
    private RtcRoomEventHandlerAdapter mIRtcRoomEventHandler = new RtcRoomEventHandlerAdapter() {
@@ -374,27 +274,27 @@ To co-host either with audience members or a host from another live room (host P
            .setPushURL(pushUrl)
            .setExpectedMixingType(ByteRTCStreamMixingType.STREAM_MIXING_BY_SERVER);
            
-           // Set the video encoding parameters for the mixed stream. The settings must be consistent with the encoding settings for stream pushing.
+           // Set the video encoding parameters for the mixed stream
            streamConfig.getVideoConfig()
                .setWidth(myConfig.width)
                .setHeight(myConfig.height)
                .setFps(myConfig.frameRate)
                .setBitrate(myConfig.bitRate);
            
-           // Set the audio encoding parameters for the mixed stream. The settings must be consistent with the encoding settings for stream pushing.
+           // Set the audio encoding parameters for the mixed stream
            streamConfig.getAudioConfig()
                .setSampleRate(44100)
                .setChannels(2);
            
            // Set the layout information for the host
            final MixedStreamLayoutRegionConfig region = new MixedStreamLayoutRegionConfig()
-                   .setUserID(userId) // The user ID of the host
+                   .setUserID(userId)
                    .setIsLocalUser(true)
                    .setRoomID(roomId)
-                   .setLocationX(0)// For reference only
-                   .setLocationY(0)// For reference only
-                   .setWidthProportion(1)// For reference only
-                   .setHeightProportion(1)// For reference only
+                   .setLocationX(0)
+                   .setLocationY(0)
+                   .setWidthProportion(1)
+                   .setHeightProportion(1)
                    .setAlpha(1)
                    .setZOrder(0)
                    .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
@@ -412,7 +312,18 @@ To co-host either with audience members or a host from another live room (host P
    }
    ```
 
-4. Adjust the view and modify the mixed stream layout when a co-host starts or stops publishing their stream.
+
+### Enabling beauty AR (Optional)
+Refer to [Effects](https://docs.byteplus.com/en/byteplus-rtc/docs/114717) for detailed instructions on how to implement beauty AR by using the RTC engine.
+### Enabling co-hosting
+To co-host either with audience members or a host from another live room (host PK battle), adjust the mixed stream layout to include the co-host's stream. Since the host is already in the RTC room, there is no need to stop streaming or rejoin the room.
+
+**Sequence diagram**
+
+![Image](../../../img/00_Implementing_interactive_live_for_Android_050.png)
+**Sample code**
+
+1. Adjust the mixed stream layout when a co-host starts or stops publishing their stream.
    ```Java
    private RtcRoomEventHandlerAdapter mIRtcRoomEventHandler = new RtcRoomEventHandlerAdapter() {
        @Override
@@ -506,51 +417,49 @@ To co-host either with audience members or a host from another live room (host P
 
 
 ### Ending co-hosting
-To stop co-hosting, do the following:
-
-1. Stop pushing mixed RTC streams to CDN and leave the RTC room.
-2. Start streaming with the live pusher.
+To stop co-hosting, adjust the mixed stream layout back to the solo hosting mode.
 
 **Sequence diagram**
 ![](../../../img/00_Implementing_interactive_live_for_Android_051.png)
 **Sample code**
 
-1. Stop pushing mixed RTC streams to CDN, leave the RTC room, and remove the view that renders the co-host's video.
+1. Adjust the mixed stream layout back to solo hosting mode.
    ```Java
-   // Stop pushing mixed RTC streams to CDN
-   mRTCVideo.stopPushStreamToCDN(taskId);
-   
-   // Leave the RTC room
-   mRTCRoom.leaveRoom();
-   
-   // Remove the view that renders the co-host's video
-   VideoCanvas canvas = new VideoCanvas();
-   canvas.renderView = null;
-   canvas.renderMode = RENDER_MODE_HIDDEN;
-   final RemoteStreamKey streamKey = new RemoteStreamKey(mRTCRoomId, uid, StreamIndex.STREAM_INDEX_MAIN);
-   mRTCVideo.setRemoteVideoCanvas(streamKey, canvas);
-   ```
+   // Adjust the mixed stream layout back to solo hosting mode
+   final MixedStreamLayoutRegionConfig region = new MixedStreamLayoutRegionConfig()
+           .setUserID(userId)
+           .setIsLocalUser(true)
+           .setRoomID(roomId)
+           .setLocationX(0)
+           .setLocationY(0)
+           .setWidthProportion(1)
+           .setHeightProportion(1)
+           .setAlpha(1)
+           .setZOrder(0)
+           .setRenderMode(MixedStreamRenderMode.MIXED_STREAM_RENDER_MODE_HIDDEN);
 
-2. Start streaming with the live pusher.
-   ```Java
-   mLivePusher.startPushWithUrls(urls.toArray(new String[0]));
+   final MixedStreamLayoutConfig layout = new MixedStreamLayoutConfig()
+           .setRegions(new MixedStreamLayoutRegionConfig[]{region});
+   streamConfig.setLayout(layout);
+
+   // Update the push to CDN task
+   mRTCVideo.updatePushMixedStreamToCDN(taskId, mixedConfig);
    ```
 
 
 ### Ending the live stream
-To end the live stream, stop the stream, release the live pusher, and destroy the RTC engine.
+To end the live stream, stop pushing the mixed stream to CDN, leave the RTC room, and destroy the RTC engine.
 **Sequence diagram**
 ![](../../../img/00_Implementing_interactive_live_for_Android_052.png)
 **Sample code**
 
-1. Stop pushing the live stream and destroy the live pusher.
+1. Stop pushing the mixed stream to CDN and leave the RTC room.
    ```Java
-   // Stop pushing the live stream
-   mLivePusher.stopPush();
+   // Stop pushing the mixed stream to CDN
+   mRTCVideo.stopPushStreamToCDN(taskId);
    
-   // Destroy the live pusher
-   mLivePusher.release();
-   mLivePusher = null;
+   // Leave the RTC room
+   mRTCRoom.leaveRoom();
    ```
 
 2. Stop audio and video capture with the RTC engine and remove the local preview.
@@ -666,7 +575,10 @@ To become a co-host, stop playing the live stream with the live player, and star
     // Set the user information
    UserInfo userInfo = new UserInfo(userId, null);
    RTCRoomConfig roomConfig = new RTCRoomConfig(ChannelProfile.CHANNEL_PROFILE_COMMUNICATION,
-           true, true, true);
+           false, false, true);
+   roomConfig.isAutoPublishAudio = false;
+   roomConfig.isAutoPublishVideo = false;
+   roomConfig.userVisibility = true;
        
    // Join the room. Get the token from the app server.
    mRTCRoom.joinRoom(token, userInfo, roomConfig);
