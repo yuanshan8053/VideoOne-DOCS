@@ -18,6 +18,7 @@ To quickly explore how to build applications with features like short dramas and
 2. Open [localhost:8000/videoone](localhost:8000/videoone) in your browser to view the demo project. When you open the URL, the homepage shows two scenarios: "Short drama" and "Interactive video".
    1. Click on "Short drama" to explore continuous, vertical full-screen episodes with swipe-to-switch and content unlocking features.
    2. Click on "Interactive video" to see a dynamic video implementation with scrollable content, commenting, and liking features.
+      
    | Homepage | Short drama | Interactive video |
    | --- | --- | --- |
    | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/ce65fcea68b845089d4c8d253eb8f7c9~tplv-goo7wpa0wc-image.image) <br>  | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1a27e4f281e64def93a1aafa2bca4109~tplv-goo7wpa0wc-image.image) <br>  | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/cfe034e2fe8345298af91076f2320427~tplv-goo7wpa0wc-image.image) <br>  |
