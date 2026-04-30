@@ -1,6 +1,6 @@
 BytePlus Video One Solution (VideoOne) is a comprehensive platform for building diverse audio-visual applications, from short dramas and conversational AI to interactive live streams and more. This document provides an overview of common business scenarios you can build with VideoOne and links to detailed technical guides for implementation.
 ## Short drama
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/da1d45c5886040ca8a96e4a7fd27176c~tplv-goo7wpa0wc-image.image" width="800px" /></div>
+![](../img/02_Use_cases_003.png)
 
 Build binge-watchable, vertical video applications for serialized, short-form content. This use case is designed for the increasingly popular short drama format, providing a mobile-first, immersive viewing experience that drives high user engagement and retention.
 
@@ -14,9 +14,10 @@ Build binge-watchable, vertical video applications for serialized, short-form co
 > Learn how to build this in our [Short drama](https://docs.byteplus.com/en/docs/byteplus-vos/short-drama) solution guide.
 
 ## Conversational AI
+
 | English demo | Japanese demo |
 | --- | --- |
-| <video src=https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3f0ad882c50f48a3b2ce734466ee75de~tplv-goo7wpa0wc-image.image></video> | <video src=https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4bdec5a52f3c46ba977ee276b5b1c8cc~tplv-goo7wpa0wc-image.image></video> |
+| ![](../img/02_Use_cases_004.mp4) | ![](../img/02_Use_cases_005.mp4) |
 Enable applications where users can have natural, real-time voice conversations with an AI agent. This solution provides the foundational technology for a wide range of interactive scenarios, from smart assistants and AI-powered customer service to language coaching and interactive gaming NPCs.
 
 **Key enabled features:**
@@ -30,7 +31,7 @@ Enable applications where users can have natural, real-time voice conversations 
 > Learn more about this solution in our [Conversational AI](https://docs.byteplus.com/en/docs/byteplus-vos/docs-conversational-ai) solution guide. If you’re interested in integrating this solution into your product or platform, please contact our technical support team.
 
 ## Interactive live streaming
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1be2eb3d58c449b58d67d8b12482f1cc~tplv-goo7wpa0wc-image.image" width="800px" /></div>
+![](../img/02_Use_cases_006.png)
 
 Enable real-time engagement for social media applications, online talent shows, outdoor events, and more. Our end-to-end solution provides all the necessary components to quickly build a feature-rich, interactive live streaming platform.
 
@@ -43,7 +44,7 @@ Enable real-time engagement for social media applications, online talent shows, 
 > Learn how to build this in our [Interactive live](https://docs.byteplus.com/en/docs/byteplus-vos/docs-implementing-interactive-live) solution guide.
 
 ## Video playback & edit
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/fa2df21c447f4d20801e90b727d12fc5~tplv-goo7wpa0wc-image.image" width="800px" /></div>
+![](../img/02_Use_cases_007.png)
 
 Build robust video-centric platforms for short-form video feeds, long-form content streaming, and in-app video creation. This solution is powered by the comprehensive storage, processing, and delivery capabilities of BytePlus Video on Demand (VOD).
 
@@ -57,7 +58,7 @@ Build robust video-centric platforms for short-form video feeds, long-form conte
 
 
 ## Swipeable media feed (aka Media up and down swiping)
-<video src=https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/fca39b73f6c14a6c8fbf6f3104901fd7~tplv-goo7wpa0wc-image.image></video>
+![](../img/02_Use_cases_008.mp4)
 Create a dynamic and engaging content discovery experience by combining live streams and on-demand videos into a single, continuous feed. This pattern is designed to maximize user retention by offering a diverse range of content through a familiar, swipe-based interface.
 
 **Key enabled features:**

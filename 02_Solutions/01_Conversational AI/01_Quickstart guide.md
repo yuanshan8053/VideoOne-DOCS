@@ -1,5 +1,5 @@
 To quickly experience the Conversational AI solution without writing any code, follow this guide. You will interact with an AI character through a web-based demo, allowing you to see the technology in action firsthand.
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/9cb68b7933c2496893204b2a9ec06e9a~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Quickstart_guide_039.png)
 ## Prerequisites
 Before you begin, ensure the following:
 
@@ -34,20 +34,20 @@ Click the hang up icon to leave the conversation room and terminate the session.
 <div type="doc-tabs">
 <div type="tab-item" title="Android" key="aV93ATUMCF">
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/d1851434c442413cb49350a6fa166132~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Quickstart_guide_040.png)
 Alternatively, you can click [here](https://play.google.com/store/apps/details?id=com.byteplus.videoone.android) to access VideoOne on Google Play.
 
 </div>
 <div type="tab-item" title="iOS" key="jbu85JR4YH">
 
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/970033325180406ebb20204facc2bcf4~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Quickstart_guide_041.png)
 Alternatively, you can click [here](https://apps.apple.com/th/app/byteplus-videoone/id6451967995) to access VideoOne on the App Store.
 
 </div>
 <div type="tab-item" title="Web" key="b1nJxvMMng">
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/0463e82bb62943e8abeec523b3d0637c~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Quickstart_guide_042.png)
 Alternatively, you can click [here](https://demo.byteplus.com/rtc/solution/aigc) to open the application directly in your browser.
 
 </div>

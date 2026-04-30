@@ -3,7 +3,7 @@ This article offers instructions on how to implement anti-screen recording and s
 # Demonstration
 After anti-screen recording functionality is integrated and enabled, app users can still watch videos normally during the screen recording process. However, after the recording is completed, the recorded screen video or screenshots will show a black screen in the area where the application's video playback window is displayed.
 The image below shows the result on iOS:
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/10e035830e614c1aa9ffe80c3b82b4b7~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Preventing_screen_recording_102.png)
 # Approach
 ## Android
 We provide two methods for preventing screen recording on Android. This flexibility allows developers to implement a customized anti-screen recording solution that best suits their application's needs.

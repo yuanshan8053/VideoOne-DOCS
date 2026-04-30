@@ -1,6 +1,7 @@
 To quickly build a cross-platform video application, you can use this guide to run the VideoOne demo project. This document provides step-by-step instructions for setting up the project within the React Native framework and leveraging the React Native SDK. Upon completion, you will have a single codebase that generates both Android and iOS applications with robust video playback functionality.
 ## Prerequisites
 Complete the following tasks before you start. We recommend maintaining a centralized record of the information gained from each task for easy reference during project setup.
+
 | **Task** | **Task-dependent feature** | **Task instruction** | **Information gained upon completion** |
 | --- | --- | --- | --- |
 | 1. Register a BytePlus account. <br> 2. Create an access key for the account. | All features | * [Signing up for a BytePlus account](https://docs.byteplus.com/byteplus-platform/docs/signing-up-your-account) <br> * [Creating an access key](https://docs.byteplus.com/byteplus-platform/docs/creating-an-accesskey) | * Access Key ID (AK) <br> * Secret Access Key (SK) |
@@ -83,7 +84,8 @@ Please follow the steps below to compile and run the project.
 
 ### Try out the app
 After opening the app, you can explore and experience the short drama solution.
-| ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/159babc54d5d42c1af358e6f9105572a~tplv-goo7wpa0wc-image.image) | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/03abd5dd80ce4af2b5234c251de3f8f7~tplv-goo7wpa0wc-image.image) | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/2adc5303e4f14a47be08b7f7b923b36f~tplv-goo7wpa0wc-image.image) <br>  |
+
+| ![Image](../../img/03_Build_your_first_app_on_React_Native_021.png) | ![Image](../../img/03_Build_your_first_app_on_React_Native_022.png) | ![Image](../../img/03_Build_your_first_app_on_React_Native_023.png) <br>  |
 | --- | --- | --- |
 ## Understanding the code
 ### Project structure

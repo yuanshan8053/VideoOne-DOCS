@@ -1,6 +1,6 @@
 The BytePlus VideoOne demo is a functional, pre-built application that allows you to experience our key solutions and capabilities firsthand, without writing any code. It utilizes our complete suite of Media SDKs and Video Cloud services to showcase a range of industry-specific scenarios and features.
 ## The native demo for Android and iOS
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/f56dc4203f964319aaca34a7d4313e3a~tplv-goo7wpa0wc-image.image)
+![Image](../img/02_Try_the_demo_app_011.png)
 ### Scene
 The **Scene** tab contains a collection of typical audio and video scenarios.
 
@@ -16,7 +16,7 @@ The **Function** tab lists core functions for each media SDK.
 * RTC
 
 ## The web demo
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/521885cc00c54bffa162551bc645554c~tplv-goo7wpa0wc-image.image)
+![Image](../img/02_Try_the_demo_app_012.png)
 ### Interactive video
 The VideoOne web demo offers an interactive video solution with the following features:
 
@@ -32,19 +32,19 @@ The BytePlus VideoOne demo applications are currently available for download in 
 <div type="doc-tabs">
 <div type="tab-item" title="Android" key="Xpl27cJs37">
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/d1851434c442413cb49350a6fa166132~tplv-goo7wpa0wc-image.image)
+![Image](../img/02_Try_the_demo_app_013.png)
 Alternatively, you can click [here](https://play.google.com/store/apps/details?id=com.byteplus.videoone.android) to access VideoOne on Google Play.
 
 </div>
 <div type="tab-item" title="iOS" key="rpS7tFG1HC">
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/0d630d1d488741aebc88e19286f5e63c~tplv-goo7wpa0wc-image.image)
+![Image](../img/02_Try_the_demo_app_014.png)
 Alternatively, you can click [here](https://apps.apple.com/th/app/byteplus-videoone/id6451967995) to access VideoOne on the App Store.
 
 </div>
 <div type="tab-item" title="Web" key="G8lAubxE6W">
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/41a8500abd664defb514224a59625b63~tplv-goo7wpa0wc-image.image)
+![Image](../img/02_Try_the_demo_app_015.png)
 Alternatively, you can click [here](https://demo.byteplus.com/videoone/ttshow) to open the application directly in your browser.
 
 </div>

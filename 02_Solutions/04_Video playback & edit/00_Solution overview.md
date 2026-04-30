@@ -1,5 +1,5 @@
 Video Playback offers a comprehensive suite of audio and video services, including features such as video effects, media uploading and management, multimedia processing, accelerated content distribution, and video playback functionality. By leveraging the infrastructure and media processing capabilities provided by BytePlus VOD, you can quickly build on-demand platforms and applications while focusing on meeting business needs and enhancing user experience.
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/fa2df21c447f4d20801e90b727d12fc5~tplv-goo7wpa0wc-image.image" width="800px" /></div>
+![](../../img/00_Solution_overview_077.png)
 
 ## Billing
 Using this solution incurs charges for the VOD service. For VOD pricing information, please refer to [BytePlus VOD pricing overview](https://docs.byteplus.com/en/byteplus-vod/docs/pricing). 
@@ -7,7 +7,7 @@ Using this solution incurs charges for the VOD service. For VOD pricing informat
 Video Playback is a one-stop solution that provides features for media uploading and video playback. You can explore the full range of video playback features and integrate them into your own application.
 ## Architecture
 This section introduces the technical architecture of the solution. Specifically, content creators use the Video Editor SDK to shoot and edit videos. These videos are then uploaded to a media server using the Upload SDK, and viewers use the Player SDK to retrieve and play them.
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/ca88f27d4f5b45e5864879cb77acb0d5~tplv-goo7wpa0wc-image.image)
+![Image](../../img/00_Solution_overview_078.png)
 ### Video Playback
 The BytePlus VOD Player engine handles video playback. It is a multi-platform suite of SDKs designed for seamless media stream playback. It offers a rich set of features that ensure a high-quality and stable playback experience. The Player SDK features small package size and efficient memory usage. Its efficiently architected APIs make it straightforward to integrate into applications that play short, feed, and long videos.
 For more details, see [Player SDK overview](https://docs.byteplus.com/en/byteplus-vod/docs/player-sdk-overview).

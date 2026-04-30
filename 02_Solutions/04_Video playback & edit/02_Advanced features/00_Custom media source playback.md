@@ -1,6 +1,6 @@
 BytePlus VideoOne demo supports custom source video playback. By inputting specific video IDs or URLs, you can play specified videos in either short-form or medium-form with customization.
 # Demonstration
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/7fc66d746fe245dfad86f36f4ce0a66b~tplv-goo7wpa0wc-image.image" width="1495px" /></div>
+![](../../../img/00_Custom_media_source_playback_085.png)
 
 # Instruction
 

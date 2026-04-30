@@ -21,7 +21,7 @@ To quickly explore how to build applications with features like short dramas and
       
    | Homepage | Short drama | Interactive video |
    | --- | --- | --- |
-   | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/ce65fcea68b845089d4c8d253eb8f7c9~tplv-goo7wpa0wc-image.image) <br>  | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1a27e4f281e64def93a1aafa2bca4109~tplv-goo7wpa0wc-image.image) <br>  | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/cfe034e2fe8345298af91076f2320427~tplv-goo7wpa0wc-image.image) <br>  |
+   | ![Image](../../img/02_Build_your_first_app_on_Web_018.png) <br>  | ![Image](../../img/02_Build_your_first_app_on_Web_019.png) <br>  | ![Image](../../img/02_Build_your_first_app_on_Web_020.png) <br>  |
 
 ## Step 3: Build and deploy
 To generate the build output for deployment, run the following command: `pnpm run build`.

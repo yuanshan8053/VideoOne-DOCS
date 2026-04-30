@@ -4,6 +4,7 @@ GitHub demo project does not include all features available in the demo app, suc
 ## Prerequisites
 Complete the following tasks before you start. We recommend that you keep a centralized record of the information gained after completing each task for easy reference during project setup.
 Some tasks are for specific features and can be skipped if you do not need them. For example, if you only want to use video playback, you do not need to activate BytePlus RTC and BytePlus MediaLive services.
+
 | **Task** | **Relevant feature** | **Task instruction** | **Information gained upon completion** |
 | --- | --- | --- | --- |
 | 1. Register a BytePlus account. <br> 2. Create an access key for the account. | All features | * [Signing up for a BytePlus account](https://docs.byteplus.com/byteplus-platform/docs/signing-up-your-account) <br> * [Creating an access key](https://docs.byteplus.com/byteplus-platform/docs/creating-an-accesskey) | * Access Key ID (AK) <br> * Secret Access Key (SK) |
@@ -51,6 +52,7 @@ Follow the steps below to clone the demo project:
 This task is required if you want to use the interactive live streaming feature.
 
 In Xcode, navigate to `Pods/Development Pods/AppConfig` and open the `BuildConfig.h` file. Configure the following fields with the values you obtained in the [Prerequisites](#prerequisites) section. The information is used for authentication when the client communicates with the BytePlus RTC service.
+
 | **Field name** | **Description** | **Example** |
 | --- | --- | --- |
 | RTCAPPID | The **AppId** of your BytePlus RTC app. | 123456********3deb567a86 |
@@ -71,6 +73,7 @@ This task is required if you want to use the interactive live streaming feature.
 This task is required if you want to experience the interactive live streaming scene.
 
 In Xcode, navigate to `Pods/Development Pods/AppConfig` and open the `BuildConfig.h` file and fill in the corresponding fields with the information obtained in the previous step. The information is used for concatenating the push and pull stream addresses.
+
 | **Field name** | **Description** | **Example** |
 | --- | --- | --- |
 | LivePullDomain | http://{domain_name}, where "domain_name" represents the **domain name for stream pulling**. | `http://pull-demo.com` |
@@ -99,6 +102,7 @@ Follow the steps below to integrate the BytePlus VOD SDK license:
 
 1. In Xcode, navigate to `Pods/Development Pods/AppConfig` and open the `BuildConfig.h` file.
 2. Set the following fields:
+
    | **Field name** | **Description** | **Example** |
    | --- | --- | --- |
    | VODAPPID | The **App ID** of the VOD app you created or bound in the [Prerequisites](#prerequisites) section. | 5****1 |
@@ -113,7 +117,7 @@ Follow the steps below to integrate the BytePlus VOD SDK license:
 If the compilation process completes without any errors, the VideoOne app will be installed on the connected mobile device and you will be directed to the login screen automatically. Log in to the app with your email, then you can start exploring different scenarios and functions provided in the app.
 If you are using a free Apple developer account, you may need to adjust the settings on your mobile device to allow apps from untrusted developers to run. In most cases, you can go to **Settings** > **General** > **Device Management** to trust the developer certificate.
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/1fbbafc47ec843529888b307d1af14f2~tplv-goo7wpa0wc-image.image)
+![Image](../../img/01_Build_your_first_app_on_iOS_017.png)
 ## Understanding the code
 The directory tree of the demo project is as follows:
 ```Plain

@@ -4,6 +4,7 @@ This demo project does not include all features available in the demo app, such 
 ## Prerequisites
 Complete the following tasks before you start. We recommend that you keep a centralized record of the information gained after completing each task for easy reference during project setup.
 Some tasks are specific to certain features and can be skipped if you do not need those features. For example, if you want to use video playback only, you do not need to activate BytePlus RTC and BytePlus MediaLive services.
+
 | **Task** | **Relevant feature** | **Task instruction** | **Information to record** |
 | --- | --- | --- | --- |
 | 1. Register a BytePlus account. <br> 2. Create an access key for the account. | All features | * [Signing up for a BytePlus account](https://docs.byteplus.com/byteplus-platform/docs/signing-up-your-account) <br> * [Creating an access key](https://docs.byteplus.com/byteplus-platform/docs/creating-an-accesskey) | * Access Key ID (AK) <br> * Secret Access Key (SK) |
@@ -38,6 +39,7 @@ Under the `app` directory, open the `build.gradle` file and set `applicationId` 
 This task is required if you want to experience interactive live streaming.
 
 Under the root directory, open the `gradle.properties` file, and configure the following fields with the values you obtained in the [Prerequisites](#prerequisites) section. The information is used for authentication when the client communicates with the BytePlus RTC service.
+
 | **Field name** | **Description** | **Example** |
 | --- | --- | --- |
 | APP_ID | The **AppId** of your BytePlus RTC app. | 123456********3deb567a86 |
@@ -58,6 +60,7 @@ This task is required if you want to experience the interactive live streaming s
 This task is required if you want to experience the interactive live streaming scene.
 
 Under the `solutions/interactivelive` directory of the demo project, open the `gradle.properties` file and fill in the corresponding fields with the information obtained in the previous step. This information is used to construct the push and pull stream addresses.
+
 | **Field name** | **Description** | **Example** |
 | --- | --- | --- |
 | LIVE_PULL_DOMAIN | http://{domain_name}, where "domain_name" represents the **domain name for stream pulling**. | `http://pull-demo.com` |
@@ -97,7 +100,7 @@ Integrate the BytePlus VOD SDK license you obtained in the [Prerequisites](#prer
 
 ### Running the app
 If the compilation process completes without any errors, the VideoOne app will be installed on the connected mobile device and you will be directed to the login screen automatically. Log in to the app with your email to start exploring its features and functions.
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/33f9ae7de2ca4e41a5c73e26ae22d630~tplv-goo7wpa0wc-image.image)
+![Image](../../img/00_Build_your_first_app_on_Android_016.png)
 ## Understanding the code
 The directory tree of the demo project is as follows:
 ```Plain

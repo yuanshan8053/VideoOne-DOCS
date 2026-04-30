@@ -1,6 +1,6 @@
 To allow your users to multitask by watching videos in a floating window while using other apps, you can implement the Picture-in-Picture (PiP) feature. This guide provides detailed, step-by-step instructions and code examples for adding PiP support to your video player on both Android and iOS platforms. 
 You can download the demo via [Trying the demo](https://docs.byteplus.com/en/docs/byteplus-vos/docs-byteplus-videoone-demo-app_1) and go to `Function` > `Video player` and play any video. After tapping Play Page, tap the Picture-in-Picture icon to turn on the feature. When the video is playing, tap the Home button to return to the home screen. The following Picture-in-Picture effect will appear:
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/188e2301ae3b44acb44364b67eb8f429~tplv-goo7wpa0wc-image.image" width="1940px" /></div>
+![](../../img/00_Picture-in-Picture_100.png)
 
 
 # Picture-in-Picture app support
@@ -116,7 +116,7 @@ For a fix related to an [issue](https://issuetracker.google.com/issues/207397151
 1. Enable the Picture-in-Picture background mode.
 
 In your Xcode project, navigate to the `Signing & Capabilities` tab, add the `Background Modes` capability, and enable `Audio, AirPlay, and Picture in Picture` as shown below:
-<div style="text-align: center"><img src="https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/cedebb4f61df4451a8d4af17e7af91a4~tplv-goo7wpa0wc-image.image" width="1872px" /></div>
+![](../../img/00_Picture-in-Picture_101.png)
 
 
 2. Configure and create an AVPlayer, and then initialize the AVPictureInPictureController. Refer to [PIPManager.m](https://github.com/byteplus-sdk/VideoOneSolutions/blob/main/Client/iOS/Component/ToolKit/VodPlayer/VEPlayerUIModule/Classes/PIPManager/PIPManager.m) for details:

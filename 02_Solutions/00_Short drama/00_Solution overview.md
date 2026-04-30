@@ -2,7 +2,7 @@ The BytePlus VideoOne short drama solution is an end-to-end platform designed to
 Short dramas—serialized, episodic content delivered in a mobile-first format—require a highly optimized viewing experience to retain users. Our solution addresses this by combining a powerful cloud backend for video processing and delivery with an intelligent client-side player and a complete reference source code. This enables you to quickly deploy an application with seamless episode switching, robust security, and features tailored for monetization.
 <div style="text-align: center"></div>
 
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/9c2e7ef5d6984da9ba1739cc57cf476d~tplv-goo7wpa0wc-image.image)
+![Image](../../img/00_Solution_overview_024.png)
 ## Core capabilities
 ### Optimized viewer experience
 
@@ -26,11 +26,12 @@ Our solution is designed to accelerate your time-to-market. We provide complete,
 
 ## Next steps
 ### Try the demo
+
 | **Platform** | **QR Code** | **Repository** | **Guideline** |
 | --- | --- | --- | --- |
-| Android | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/79c715dc4cd646b8893ff2e754892157~tplv-goo7wpa0wc-image.image) <br> > Click [VideoOne](https://play.google.com/store/apps/details?id=com.byteplus.videoone.android) to find it on Google Play | [VideoOneSolutions-Android](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/Android) | [Build your first app on Android](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-android-) |
-| iOS |  <br> ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/745ff6ddfca740b9bf0a38013d1dbfac~tplv-goo7wpa0wc-image.image) <br> > Click [VideoOne](https://apps.apple.com/app/id6451967995) to find it on App Store | [VideoOneSolutions-iOS](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/iOS) | [Build your first app on iOS](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-ios-) |
-| Web | ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/33609d74ea7b412790ec2740552170c9~tplv-goo7wpa0wc-image.image) <br> > Click [Short Drama](https://demo.byteplus.com/videoone/dramaGround) to try the demo | [videoone-example](https://github.com/byteplus-sdk/videoone-example) | [Build your first app on Web](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-web) |
+| Android | ![Image](../../img/00_Solution_overview_025.png) <br> > Click [VideoOne](https://play.google.com/store/apps/details?id=com.byteplus.videoone.android) to find it on Google Play | [VideoOneSolutions-Android](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/Android) | [Build your first app on Android](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-android-) |
+| iOS |  <br> ![Image](../../img/00_Solution_overview_026.png) <br> > Click [VideoOne](https://apps.apple.com/app/id6451967995) to find it on App Store | [VideoOneSolutions-iOS](https://github.com/byteplus-sdk/VideoOneSolutions/tree/main/Client/iOS) | [Build your first app on iOS](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-ios-) |
+| Web | ![Image](../../img/00_Solution_overview_027.png) <br> > Click [Short Drama](https://demo.byteplus.com/videoone/dramaGround) to try the demo | [videoone-example](https://github.com/byteplus-sdk/videoone-example) | [Build your first app on Web](https://docs.byteplus.com/en/docs/byteplus-vos/docs-running-the-demo-web) |
 ### Implementation
 To learn more about implementing the solution in your own app, please refer to the following topics:
 

@@ -1,17 +1,20 @@
 The BytePlus Video One conversational AI solution allows users to engage in scenario-based, real-time conversations that go beyond the limitations of text. Users can have natural and smooth conversations with AI just as they would with another person. The solution can be used in scenarios such as smart AI assistants, AI customer service, AI smart companions, AI language coaches, AI gaming NPC, and smart hardware.
+
 | English demo | Japanese demo |
 | --- | --- |
-| <video src=https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/3f0ad882c50f48a3b2ce734466ee75de~tplv-goo7wpa0wc-image.image></video> | <video src=https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/4bdec5a52f3c46ba977ee276b5b1c8cc~tplv-goo7wpa0wc-image.image></video> |
+| ![](../../img/00_Solution_overview_036.mp4) | ![](../../img/00_Solution_overview_037.mp4) |
 # Technical architecture
 The conversational AI solution uses BytePlus RTC for efficient acquisition of audio and video data, customized processing, and ultra-low latency transmission. The cloud-based smart audiovisual processing module uses 3A algorithms, AI noise reduction, and other capabilities to mitigate the impact of background noise and device performance on conversations. In addition, the solution integrates ASR (Automatic Speech Recognition), TTS (Text to Speech), LLM (Large Language Model), knowledge base RAG (Retrieval-Augmented Generation) and other services that simplify the speech-to-text and text-to-speech conversion processes. Its advanced capabilities in conversational intelligence, natural language processing, and multimodal interaction allow app users to interact in real time with the cloud-based large model.
-![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/d9cba1e76c9a4ad78c88386bfca9b023~tplv-goo7wpa0wc-image.image)
+![Image](../../img/00_Solution_overview_038.png)
 # Features
 ## **Basic features**
+
 | **Feature** | **Description** |
 | --- | --- |
 | Real-time AI conversation | Users can have natural and smooth conversations with AI in real time, just as they would with another person. Users can also interrupt at any time for two-way interaction. |
 | Noise suppression | Using advanced 3A audio technology and AI noise suppression, the solution effectively removes background noise while preserving clear human speech. This provides a balance between strong noise suppression and high fidelity in noisy environments. |
 ## Advanced features
+
 | **Feature** | **Description** |
 | --- | --- |
 | Real-time subtitles | The conversation is converted to text and displayed on the device screen in real time. |
